@@ -1,0 +1,30 @@
+@import "../../vendor/bower_components/primer-css/scss/primer.scss";
+
+body {
+  padding-top:50px;
+}
+
+p.leadsub  {
+  font-weight:300;
+  color:#555;
+  font-size:16px;
+}
+
+.detailsub {
+  font-weight:bold;
+  font-size:14px;
+}
+
+.detailsub:not(:first-of-type) {
+  margin-top:30px;
+}
+.about-header {
+  margin-top:40px;
+  padding-bottom:10px;
+  margin-bottom:20px;
+  border-bottom:1px solid lighten($gray-light, 30%);
+}
+
+.state {
+  margin-right:5px;
+}

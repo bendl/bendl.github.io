@@ -1,0 +1,21 @@
+{
+  "name": "bendl.github.io",
+  "authors": [
+    "Ben Lancaster <bdl@live.co.uk>"
+  ],
+  "description": "Portfolio",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "primer-css": "^3.0.1"
+  }
+}
