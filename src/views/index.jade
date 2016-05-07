@@ -10,7 +10,7 @@ html.no-js
 	body
 		div.container
 			div.columns
-				div.one-third.column
+				div.one-half.column
 					//img.avatar(src="https://avatars2.githubusercontent.com/u/1291136?v=3&s=460", width="250", height="250")
 					h1 Ben Lancaster
 					p
@@ -18,13 +18,12 @@ html.no-js
 						span.state.state-open C++
 						span.state.state-open Embedded
 						span.state.state-open Java
-						span.state.state-open Firmware
+						span.state.state-open Emulation
 					p.lead.mb-1 Embedded Software Engineer
 					p.leadsub(style="width:300px") Spirent Communications LPC
-					hr.mt-4
+					hr.mt-4(style="width:80%")
 					p.mt-4
 						|England, United Kingdom
-					span.octicon.octicon-mail
 					p
 						a(href="mailto:bdl@live.co.uk") bdl@live.co.uk
 					p
@@ -32,27 +31,37 @@ html.no-js
 					p
 						a(href="https://www.linkedin.com/in/bendl") LinkedIn
 					p
-						iframe(src="https://ghbtns.com/github-btn.html?user=bendl&type=follow&count=true",
+						iframe(src="https://ghbtns.com/github-btn.html?user=bendl&type=follow",
 						frameborder="0", scrolling="0", width="220px", height="20px")
 					p
 						a.btn.btn-sm(href="mailto:bdl@live.co.uk", role="button") Get in contact
 				div.one-half.column
 					h3.about-header.mt-0 Projects
+
+					p.detailsub
+						a(href="http://github.com/bendl/tce") TCE: Theoretical CPU Emulator
+						span.counter 42
+						//span.counter
+							span.octicon.octicon-star
+
+					p.note Detailed specification, implementation, and application of a theoretical CPU. Small
+						|  instruction set. Graphics display with integrated font set. Simple #define grammars with example calculator application.
+
 					p.detailsub
 						a(href="http://github.com/bendl/cengine") CEngine
-						span.counter 1
+						span.counter 20
 					p.note (C++, OpenGL) Cross-platform 2D isometric game engine. Features Lua game scripting and component based
 						|entity system.
 						|Inspired by StrongHold and OpenTTD.
 
 					p.detailsub
 						a(href="http://github.com/bendl/chip8") Chip-8 Emulator
-						span.counter 1
+						span.counter 16
 					p.note (C) Small emulator for Chip-8. 36 opcodes, keyboard input, ouput to a 64x32 pixel display.
 
 					p.detailsub
 						a(href="http://github.com/bendl/egen") Express-CL
-						span.counter 1
+						span.counter 15
 					p.note (Node.js) Command line tool which aids Node.js Express development by generating routes, controllers, and unit tests.
 						|Inspired by Rails and Composer.
 
