@@ -1,8 +1,10 @@
-@import "../../vendor/bower_components/primer-css/scss/primer.scss";
-@import "../../vendor/bower_components/octicons/octicons/octicons.scss";
+@import "../../bower_components/primer-css/scss/primer.scss";
+@import "../../bower_components/octicons/build/octicons.min.css";
+
+$project-padding: 15px;
 
 body {
-  padding-top:50px;
+  padding:30px;
 }
 
 p.leadsub  {
@@ -13,7 +15,7 @@ p.leadsub  {
 
 .detailsub {
   font-weight:bold;
-  font-size:14px;
+  font-size:16px;
 }
 
 .detailsub:not(:first-of-type) {
@@ -37,4 +39,27 @@ p.leadsub  {
 
 span.counter {
   margin-left:6px;
+}
+
+.project-entry:not(:first-of-type) {
+  padding-top: $project-padding;
+}
+
+.project-entry {
+  border-bottom:solid 1px #EEE;
+  padding-bottom: $project-padding;
+
+  .note {
+    font-size:14px;
+  }
+}
+
+.extra-info {
+  .note {
+    color:#666;
+  }
+  li {
+    margin-left:20px;
+    color: #666;
+  }
 }

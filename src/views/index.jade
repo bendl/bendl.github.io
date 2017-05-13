@@ -17,15 +17,14 @@ html.no-js
 						span.state.state-open C
 						span.state.state-open C++
 						span.state.state-open Embedded
-						span.state.state-open Java
-						span.state.state-open Emulation
+						span.state.state-open Linux
 					p.lead.mb-1 Embedded Firmware Engineer
 					p.leadsub(style="width:300px") Spirent Communications PLC
 					hr.mt-4(style="width:80%")
 					p.mt-4
 						|England, United Kingdom
 					p
-						a(href="mailto:bdl@live.co.uk") bdl@live.co.uk
+						a(href="mailto:ben@bendl.me") ben@bendl.me
 					p
 						a(href="https://github.com/bendl") GitHub
 					p
@@ -34,54 +33,45 @@ html.no-js
 						iframe(src="https://ghbtns.com/github-btn.html?user=bendl&type=follow",
 						frameborder="0", scrolling="0", width="220px", height="20px")
 					p
-						a.btn.btn-sm(href="mailto:bdl@live.co.uk", role="button") Get in contact
+						a.btn.btn-sm(href="mailto:ben@bendl.me", role="button") Get in contact
 				div.one-half.column
-					h3.about-header.mt-0 Projects
+					h3.about-header.mt-0 Interesting Projects
+					div.project-entry
+						p.detailsub
+							a(href="http://github.com/bendl/libccl") libccl
+						p.note Compiler for a text and visual programming language with a simple retargetable backend. 
+							| Features simple optimisations including constant folding and unreachable code elimination.
 
-					p.detailsub
-						a(href="http://github.com/bendl/tce") TCE: Theoretical CPU Emulator
-						span.counter 42
-						//span.counter
-							span.octicon.octicon-star
-
-					p.note Detailed specification, implementation, and application of a theoretical CPU. Small
-						|  instruction set. Graphics display with integrated font set. Simple #define grammars with example calculator application.
-
-					p.detailsub
-						a(href="http://github.com/bendl/cengine") CEngine
-						span.counter 20
-					p.note (C++, OpenGL) Cross-platform 2D isometric game engine. Features Lua game scripting and component based
-						|entity system.
-						|Inspired by StrongHold and OpenTTD.
-
-					p.detailsub
-						a(href="http://github.com/bendl/chip8") Chip-8 Emulator
-						span.counter 16
-					p.note (C) Small emulator for Chip-8. 36 opcodes, keyboard input, ouput to a 64x32 pixel display.
-
-					p.detailsub
-						a(href="http://github.com/bendl/egen") Express-CL
-						span.counter 15
-					p.note (Node.js) Command line tool which aids Node.js Express development by generating routes, controllers, and unit tests.
-						|Inspired by Rails and Composer.
-
-					p.detailsub
-						a.with-count.mr-3(href="http://github.com/bendl/node-xbox") Node-Xbox
-						img(src="https://img.shields.io/npm/dm/node-xbox.svg?style=social")
-					p.note (Node.js) Node.js wrapper module for interfacing with Xbox.com through XboxApi.com
-
+					div.project-entry
+						p.detailsub
+							a(href="http://github.com/bendl/cengine") CEngine
+							span.counter 20
+						p.note (C++, OpenGL) Cross-platform 2D isometric game engine. Features Lua game scripting and component based
+							|entity system.
+							|Inspired by StrongHold and OpenTTD.
+	
+					div.project-entry
+						p.detailsub
+							a(href="http://github.com/bendl/egen") Express-CL
+							span.counter 15
+						p.note (Node.js) Command line tool which aids Node.js Express development by generating routes, controllers, and unit tests.
+							|Inspired by Rails and Composer.
+						
 					p.mt-4
-						a(href="http://github.com/bendl").link-gray And more on Github...
+						a(href="https://github.com/bendl").link-gray And more on Github...
 
 					h3.about-header Experience
 					p
-						strong.detailsub Embedded Software Engineer Placement
+						strong.detailsub Embedded Firmware Engineer Placement
 						br
 						strong Spirent Communications
 						br
 						|2016-2017 (13 Months)
-					//p.note
-						|Responsible for
+					div.extra-info
+						p.note Roles include: 
+						ul
+							li Writing and maintaining embedded C code running on MicroBlaze processors. 
+							li Configuring and building embedded Linux distributions and kernels modules for virtualisation.
 
 					h3.about-header Education
 					p
@@ -90,6 +80,9 @@ html.no-js
 						strong University of Plymouth
 						br
 						|2014-2018
-					p.note
-						|Courses: Computation Theory and Artificial Intelligence, Embedded Programming and Compilers,
-						|Computer and Information Security, Programming Structures and Algorithms
+					div.extra-info
+						p.note Courses include:
+						ul
+							li Computation Theory, Embedded programming and Compilers, Data structures and Algorithms.
+							li Machine Vision, Computational Intelligence, Machine Learning
+							li Final project: Cross-compiler for a visual programming language.

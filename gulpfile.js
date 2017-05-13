@@ -6,12 +6,12 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var jade = require('gulp-pug');
 
-gulp.task('default', function(){
+gulp.task('default', ['views', 'styles'], function () {
     gulp.watch('./src/views/**/*', ['views']);
     gulp.watch('./src/styles/**/*', ['styles']);
 });
 
-gulp.task('views', function(){
+gulp.task('views', function () {
     gulp.src('./src/views/**/*.jade')
         .pipe(jade({
             pretty: true
@@ -19,8 +19,8 @@ gulp.task('views', function(){
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('styles', function(){
+gulp.task('styles', function () {
     gulp.src('./src/styles/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(gulp.dest('./styles'));
 });
