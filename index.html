@@ -1,94 +1,266 @@
 <!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="columns">
-        <div class="one-half column">
-          <!--img.avatar(src="https://avatars2.githubusercontent.com/u/1291136?v=3&s=460", width="250", height="250")-->
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Ben Lancaster</title>
+  <meta name="description" content="">
+  <meta name="author" content="Ben Lancaster <ben@bendl.me>">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  
+  <style>
+    body {
+      margin-top:50px;
+      color:black;
+      font-family: sans-serif;
+    }
+
+    header h1, section h1 {
+      /*color:cornflowerblue;*/
+      /*color:dodgerblue;*/
+      color:royalblue;
+    }
+
+
+    header > h1 {
+      font-size: 280%;
+      margin-bottom: 0px;
+    }
+
+    header p {
+      margin-bottom:5px;
+    }
+
+    header p a {
+      margin:0;
+      margin-bottom:10px;
+    }
+    
+    section > h1 {
+      margin-bottom:5px;
+      font-size: 140%;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+
+    div.item header h1 {
+      font-size: 112%;
+      font-weight: bold;
+      line-height: 150%;
+      margin: 0;
+      margin-top:15px;
+      color: inherit;
+    }
+
+    div.item header span.sub {
+      color:rgb(102, 102, 102);
+    }
+
+    div.item p {
+      margin:0;
+    }
+    
+    div.item p:last-child {
+      margin-bottom:20px;
+    }
+
+    div.item ul {
+      margin:0;
+      padding:0 20px;
+      list-style-position: outside;
+    }
+
+    div.item ul li {
+      padding:0;  
+      margin:0;
+    }
+
+    .highlight { text-decoration: underline; }
+
+    a {
+      text-decoration: none;
+      background:rgb(240, 240, 240);
+      color:black;
+    }
+
+    a:visited {
+      color: inherit;
+    }
+
+    a:hover, a:focus {
+      color: royalblue;
+    }
+
+    strong {
+      color:#444;
+    }
+
+    .button {
+      width:200px;
+    }
+
+    .me-info {
+      text-align: center;
+    }
+
+    /* Larger than tablet */
+    @media (min-width: 550px) {
+      .container {
+        width:960px;
+      }
+
+      .me-info {
+        text-align: left;
+        border-bottom: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="four columns me-info" style="background:white;">
+        <header>
           <h1>Ben Lancaster</h1>
-          <p><span class="state state-open">C</span>
-            <span class="state state-open">C++</span>
-            <span class="state state-open">Embedded</span>
-            <span class="state state-open">Linux</span>
-            <span class="state state-open">VHDL</span>
-          </p>
-          <p class="lead mb-1">Embedded Firmware/Software/FPGA</p>
-          <!--<p class="leadsub" style="width:300px;"></p>-->
-          <hr class="mt-4" style="width:80%;">
-          <p class="mt-4">England, United Kingdom</p>
+          <p><strong>Embedded Firmware/Software/FPGA</strong></p>
+          <p>England, United Kingdom</p>
+          <hr>
           <p><a href="mailto:ben@bendl.me">ben@bendl.me</a></p>
-          <p><a href="https://github.com/bendl">GitHub</a></p>
-          <p><a href="https://www.linkedin.com/in/bendl">LinkedIn</a></p>
-          <!--
-          <p>
-            <iframe src="https://ghbtns.com/github-btn.html?user=bendl&amp;type=follow" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
-          </p>
-          -->
-          <p><a class="btn btn-lg" href="mailto:ben@bendl.me" role="button">Get in contact</a></p>
-          <p><a class="btn btn-lg" href="Ben_Lancaster_ARM_graduate_SW.pdf" role="button" target="_blank">Download CV</a></p>
-        </div>
-        <div class="one-half column">
-          
-          <h3 class="about-header mt-0">Interesting Projects</h3>
-          <div class="project-entry">
-            <p class="detailsub"><a href="http://github.com/bendl/libccl">libccl</a></p>
-            <p class="note">
-              Compiler and assembler for x86 (Linux) and the UVM CPU. 
-              Features simple optimisations including constant folding and unreachable code elimination.</p>
-          </div>
-          <div class="project-entry">
-            <p class="detailsub"><a href="http://github.com/bendl/fpu">16-bit soft-microprocessor</a><span class="counter">15</span></p>
-            <p class="note">
-              FPGA-based 16-bit RISC processor. Normal and privileged operating modes, 4Kb addressable memory, compiler and assembler.</p>
-          </div>
-          <div class="project-entry">
-            <p class="detailsub"><a href="http://github.com/bendl/cengine">CEngine</a><span class="counter">20</span></p>
-            <p class="note">(C++, OpenGL) Cross-platform 2D isometric game engine. Features Lua game scripting and component based
-              entity system.
-              Inspired by StrongHold and OpenTTD.
+          <p><a href="https://www.linkedin.com/in/bendl">linkedin.com/in/bendl</a></p>
+          <p><a href="https://github.com/bendl">github.com/bendl</a></p>
+          <br>
+          <p><a class="button" href="mailto:ben@bendl.me">Contact</a></p>
+          <p><a class="button" href="Ben_Lancaster_ARM_graduate_SW.pdf">Download CV</a></p>
+        </header>
+      </div>
+      
+      <div class="eight columns" style="background:white;">
+
+        <section>
+          <h1>Experience</h1>
+          <div class="item">
+            <header>
+              <h1>Firmware Engineer Placement</h1>
+              <span class="sub">
+                <a href="#">Spirent Communications PLC</a> — United Kindom — 2016-2017 (14 Months)
+              </span>
+            </header>
+            <p>
+              <ul>
+                <li><span class="highlight">Linux USB and PCIe kernel driver</span> development.</li>
+                <li><span class="highlight">Embedded programming</span> on <span class="highlight">Xilinx MicroBlaze FPGAs</span> and <span class="highlight">PIC16/24 microcontrollers</span>.</li>
+                <li>Implemented on-chip power levelling and calibration for <span class="highlight">GNSS</span> <span class="highlight">RF signal generators</span>.</li>
+                <li>Controlling on-board fans, LEDs, EEPROM, and other peripherals with <span class="highlight">I2C</span> and <span class="highlight">SMBus</span>.</li>
+                <li>Configuring, building, and maintaining <span class="highlight">Embedded Linux distributions</span> using <span class="highlight">Yocto</span>.</li>
+              </ul>
             </p>
           </div>
-          
-          <p class="mt-4"><a class="link-gray" href="https://github.com/bendl">And more on Github...</a></p>
-          <h3 class="about-header">Experience</h3>
-          <p>
-            <strong class="detailsub">Embedded Firmware Engineer, Placement</strong>
-            <br>
-            <strong>Spirent Communications - Position, Navigation & Timing</strong>
-            <br>2016-2017 (14 Months)
-          </p>
-          <div class="extra-info">
-            <p class="note">Roles include: </p>
-            <ul>
-              <li>Linux USB and PCIe kernel driver development.</li>
-              <li>Embedded programming on Xilinx MicroBlaze FPGAs and PIC16/24 microcontrollers.</li>
-              <li>Implemented on-chip power levelling and calibration for GNSS RF signal generators.</li>
-              <li>Controlling on-board fans, LEDs, EEPROM, and other peripherals with I2C and SMBus.</li>
-              <li>Configuring, building, and maintaining Embedded Linux distributions using Yocto.</li>
-            </ul>
+        </section>
+
+        <section>
+          <h1>Education</h1>
+          <div class="item">
+            <header>
+              <h1>BSc (Hons) Computer Science</h1>
+              <span class="sub">
+                <a href="https://www.plymouth.ac.uk/">Plymouth University</a> — United Kindom — 2014-2018 (Current)
+              </span>
+            </header>
+            <p>
+                <ul>
+                  <li>
+                    <strong>Final Project:</strong> <span class="highlight">FPGA-based 16-bit RISC Processor Design</span>.
+                  </li>
+                  <li>
+                      Courses include: <span class="highlight">Digital Electronics</span>, 
+                      <span class="highlight">Embedded Systems and Compilers</span>, 
+                      <span class="highlight">Machine Vision</span>, <span class="highlight">Computation Theory</span>.
+                  </li>
+                </ul>
+            </p>
+            <p></p>
           </div>
-          <h3 class="about-header">Education</h3>
-          <p><strong class="detailsub">(BSc) Computer Science</strong><br><strong>University of Plymouth</strong><br>2014-2018</p>
-          <div class="extra-info">
-            <p>Final Project: Space-optimised 16-bit CPU Design for FPGAs</p>
-            <p class="note">Courses include:</p>
-            <ul>
-              <li>Digital Electronics</li>
-              <li>Embedded Systems and Compilers</li>
-              <li>Machine Vision, Computation Theory</li>
-              <li>...</li>
-            </ul>
+          
+        </section>
+          
+        <div class="row">
+          <div class="six columns">
+            <section>
+              <h1>Open Source Projects</h1>
+              <div class="item">
+                <header>
+                  <h1>FPGA 16-bit soft-microprocessor</h1>
+                  <span class="sub">
+                      <a href="https://github.com/bendl/vcc">bendl/vcc</a>
+                    </span>
+                </header>
+                <p><span class="highlight">Processor design</span> and implentation for <span class="highlight">Xilinx Spartan-6 FPGAs</span> featuring pipelining, 64Kb addressable memory, compiler and assembler.</p>
+              </div>
+              <div class="item">
+                <header>
+                  <h1>libccl</h1>
+                  <span class="sub">
+                      <a href="https://github.com/bendl/libccl">bendl/libccl</a>
+                    </span>
+                </header>
+                <p><span class="highlight">Compiler</span> and <span class="highlight">assembler</span> for <span class="highlight">x86</span> (Linux) and the UVM CPU. 
+                  Features simple optimisations including constant folding and unreachable code elimination.</p>
+              </div>
+
+              <div class="item">
+                <header>
+                  <h1>BugZilla Kanban Chrome Extension</h1>
+                  <span class="sub">
+                      <a href="https://github.com/bendl/bugzilla-board">bendl/bugzilla-board</a>
+                    </span>
+                </header>
+                <p>Chrome extension to view BugZilla bugs in a KanBan board. Sort by Assignee or Status.</p>
+              </div>
+            </section>
+          </div>
+
+          <div class="six columns">
+            <section>
+              <h1>Contributions</h1>
+              <div class="item">
+                  <header>
+                    <h1>Gravity Programming Language</h1>
+                    <span class="sub">
+                        <a href="https://github.com/marcobambini/gravity">marcobambini/gravity</a> — 2.3k stars
+                      </span>
+                  </header>
+                  <p>A dynamic object-oriented <span class="highlight">programming language</span>, <span class="highlight">compiler</span>, and virtual machine, implemented in <span class="highlight">C</span>.</p>
+                </div>
+            </section>
+            <section>
+              <h1>Skills</h1>
+              <div class="item">
+                <p>C, C++, Embedded (PIC & ARM), Linux, VHDL, Verilog</p>
+              </div>
+            </section>
           </div>
         </div>
       </div>
-    </div>
-  </body>
+    </div>  
+  </div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
 </html>
