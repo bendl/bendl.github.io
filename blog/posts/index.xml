@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ben Lancaster</title>
-    <link>http://bendl.me/blog/</link>
-    <description>Recent content on Ben Lancaster</description>
+    <title>Posts on Ben Lancaster</title>
+    <link>http://bendl.me/blog/posts/</link>
+    <description>Recent content in Posts on Ben Lancaster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; Copyright 2017 Your name</copyright>
     <lastBuildDate>Sat, 10 Mar 2018 18:35:39 +0000</lastBuildDate>
     
-	<atom:link href="http://bendl.me/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://bendl.me/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
