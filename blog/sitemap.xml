@@ -39,6 +39,12 @@
   </url>
   
   <url>
+    <loc>http://bendl.me/blog/categories/hugo/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://bendl.me/blog/posts/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>

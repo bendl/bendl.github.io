@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev on Ben Lancaster</title>
+    <link>http://bendl.me/blog/categories/dev/</link>
+    <description>Recent content in Dev on Ben Lancaster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Copyright 2018 Ben Lancaster</copyright>
+    <lastBuildDate>Sat, 10 Mar 2018 18:33:07 +0000</lastBuildDate>
+    
+	<atom:link href="http://bendl.me/blog/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://bendl.me/blog/posts/my-first-post/</link>
+      <pubDate>Sat, 10 Mar 2018 18:33:07 +0000</pubDate>
+      
+      <guid>http://bendl.me/blog/posts/my-first-post/</guid>
+      <description>Foo bar testing</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -45,6 +45,12 @@
         </a>
         <ul class="article-meta">
           <li class="article-meta-date"><time>March 10, 2014</time></li>
+          <li class="article-meta-categories">
+            <a href="/blog/categories/hugo/">
+              <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#folder"></use></svg>
+              Hugo
+            </a>&nbsp;
+          </li>
           <li class="article-meta-tags">
             <a href="/blog/tags/foo/">
               <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#tag"></use></svg>
@@ -59,7 +65,7 @@
           </li>
         </ul>
         <div class="article-content">
-          Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+          Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &lt;root&gt;/ ▾ images/ logo.png  should become
 ▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
         </div>

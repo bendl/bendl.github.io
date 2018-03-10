@@ -6,13 +6,13 @@
   <title>Migrate to Hugo from Jekyll - Ben Lancaster</title>
   <meta property="og:title" content="Migrate to Hugo from Jekyll - Ben Lancaster" />
   <meta name="twitter:title" content="Migrate to Hugo from Jekyll - Ben Lancaster" />
-  <meta name="description" content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+  <meta name="description" content="Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &lt;root&gt;/ ▾ images/ logo.png  should become
 ▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.">
-  <meta property="og:description" content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+  <meta property="og:description" content="Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &lt;root&gt;/ ▾ images/ logo.png  should become
 ▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.">
-  <meta name="twitter:description" content="Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move …">
+  <meta name="twitter:description" content="Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, …">
   <meta name="author" content="Ben Lancaster"/>
   <meta property="og:site_name" content="Ben Lancaster" />
   <meta property="og:url" content="/blog/blog/posts/my-second-post/" />
@@ -50,6 +50,12 @@
       <hr class="article-title-bottom">
       <ul class="article-meta">
         <li class="article-meta-date"><time>March 10, 2014</time></li>
+        <li class="article-meta-categories">
+          <a href="/blog/categories/hugo/">
+            <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#folder"></use></svg>
+            Hugo
+          </a>&nbsp;
+        </li>
         <li class="article-meta-tags">
           <a href="/blog/tags/foo/">
             <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#tag"></use></svg>
@@ -69,7 +75,6 @@
 <ul>
 <li>
 <ul>
-<li><a href="#move-static-content-to-static">Move static content to <code>static</code></a></li>
 <li><a href="#create-your-hugo-configuration-file">Create your Hugo configuration file</a></li>
 <li><a href="#set-your-configuration-publish-folder-to-site">Set your configuration publish folder to <code>_site</code></a></li>
 <li><a href="#convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</a></li>
@@ -89,8 +94,6 @@
 </nav>
 </aside>
       
-
-<h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
 
 <p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
 With Jekyll, something that looked like</p>

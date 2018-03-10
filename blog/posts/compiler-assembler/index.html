@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>My First Post - Ben Lancaster</title>
-  <meta property="og:title" content="My First Post - Ben Lancaster" />
-  <meta name="twitter:title" content="My First Post - Ben Lancaster" />
-  <meta name="description" content="Foo bar testing">
-  <meta property="og:description" content="Foo bar testing">
-  <meta name="twitter:description" content="Foo bar testing">
+  <title>Assembler Basics for Instruction Sets - Ben Lancaster</title>
+  <meta property="og:title" content="Assembler Basics for Instruction Sets - Ben Lancaster" />
+  <meta name="twitter:title" content="Assembler Basics for Instruction Sets - Ben Lancaster" />
+  <meta name="description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
+struct prco_op_struct { // Encoded 16-bit instruction word // for printing to file unsigned short opcode; // Instruction parts // (opcode, register selects, immediates, etc.) unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information // function, data type, etc.">
+  <meta property="og:description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
+struct prco_op_struct { // Encoded 16-bit instruction word // for printing to file unsigned short opcode; // Instruction parts // (opcode, register selects, immediates, etc.) unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information // function, data type, etc.">
+  <meta name="twitter:description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
+struct …">
   <meta name="author" content="Ben Lancaster"/>
   <meta property="og:site_name" content="Ben Lancaster" />
-  <meta property="og:url" content="/blog/blog/posts/my-first-post/" />
+  <meta property="og:url" content="/blog/blog/posts/compiler-assembler/" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.37.1" />
@@ -42,30 +45,80 @@
     <article class="article">
       
       
-      <h1 class="article-title">My First Post</h1>
+      <h1 class="article-title">Assembler Basics for Instruction Sets</h1>
       
       <hr class="article-title-bottom">
       <ul class="article-meta">
         <li class="article-meta-date"><time>March 10, 2018</time></li>
         <li class="article-meta-categories">
-          <a href="/blog/categories/dev/">
+          <a href="/blog/categories/compilers/">
             <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#folder"></use></svg>
-            Dev
+            Compilers
           </a>&nbsp;
         </li>
         <li class="article-meta-tags">
-          <a href="/blog/tags/test/">
+          <a href="/blog/tags/c/">
             <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#tag"></use></svg>
-            test
+            C
           </a>&nbsp;
         </li>
       </ul>
       
       
 
-<h3 id="foo-bar">Foo bar</h3>
+<h2 id="libccl-relocatable-to-absolute-machine-code">LIBCCL: Relocatable to Absolute Machine Code</h2>
 
-<p>testing</p>
+<p>The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the <code>struct prco_op_struct</code>.</p>
+
+<pre><code class="language-c">struct prco_op_struct {
+    // Encoded 16-bit instruction word
+    // for printing to file
+    unsigned short opcode;
+
+    // Instruction parts
+    // (opcode, register selects, immediates, etc.)
+    unsigned char op;
+    unsigned char regD  : 3;
+    unsigned char regA  : 3;
+    unsigned char imm8  : 8;
+    signed char   simm5 : 5;
+    
+    // Optional AST pointer to provide extra information
+    // function, data type, etc.
+    void          *ast;
+    
+    // Flags
+    unsigned int  asm_offset;
+    unsigned int  asm_flags;
+    char          *comment;
+    unsigned int  id;
+};
+</code></pre>
+
+<h3 id="asm-flags">asm_flags</h3>
+
+<pre><code class="language-c">#define ASM_FUNC_EXIT   0x01
+#define ASM_FUNC_START  0x02
+#define ASM_IF_BRANCH   0x04
+#define ASM_IF_ELSE     0x08
+#define ASM_NOP_NOP     0x10
+#define ASM_FUNC_CALL   0x20
+#define ASM_CALL_NEXT   0x40
+</code></pre>
+
+<h2 id="finding-jmp-locations">Finding JMP locations</h2>
+
+<p>To find the address of the function or global variable we need to know 2 things:
+1.  The order or list of instructions already pushed
+2.  Size of each pushed instruction</p>
+
+<p>In the VCC architecture, the JMP instruction jumps to the value in a selected register, so a JMP instruction will look like the following:</p>
+
+<pre><code class="language-as">MOVI 0xfe, Ax
+JMP  Ax
+</code></pre>
+
+<p>But how is the <code>0xfe</code> address calculated.</p>
 
     </article>
 
@@ -75,7 +128,7 @@
     <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   </li>
   <li>
-    <div class="fb-share-button" data-href="http://bendl.me/blog/posts/my-first-post/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <div class="fb-share-button" data-href="http://bendl.me/blog/posts/compiler-assembler/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -122,9 +175,11 @@
 
     <ul class="pager article-pager">
       <li class="pager-newer">
-          <a href="/blog/posts/compiler-assembler/" data-toggle="tooltip" data-placement="top" title="Assembler Basics for Instruction Sets">&lt; Newer</a>
+          <a href="/blog/posts/my-second-post/" data-toggle="tooltip" data-placement="top" title="Migrate to Hugo from Jekyll">&lt; Newer</a>
       </li>
-      <li class="pager-older pager-noitem">Older &gt;</li>
+      <li class="pager-older">
+        <a href="/blog/posts/my-first-post/" data-toggle="tooltip" data-placement="top" title="My First Post">Older &gt;</a>
+      </li>
     </ul>
   </div>
 
