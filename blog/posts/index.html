@@ -6,7 +6,7 @@
   <title>Posts - Ben Lancaster</title>
   <meta property="og:title" content="Posts - Ben Lancaster" />
   <meta name="twitter:title" content="Posts - Ben Lancaster" />
-  <meta name="author" content="Your name"/>
+  <meta name="author" content="Ben Lancaster"/>
   <meta property="og:site_name" content="Ben Lancaster" />
   <meta property="og:url" content="/blog/blog/posts/" />
   <meta property="og:type" content="website" />
@@ -25,10 +25,12 @@
   <nav class="site-navi">
     <h1 class="site-title"><a href="/blog/">Ben Lancaster</a></h1>
     <ul class="site-navi-items">
+      <li class="site-navi-item-blog"><a href="/blog/" title="Blog">Blog</a></li>
       <li class="site-navi-item-categories"><a href="/blog/categories/" title="Categories">Categories</a></li>
       <li class="site-navi-item-tags"><a href="/blog/tags/" title="Tags">Tags</a></li>
       <li class="site-navi-item-archives"><a href="/blog/archives/" title="Archives">Archives</a></li>
       <li class="site-navi-item-about"><a href="/blog/about/" title="About">About</a></li>
+      <li class="site-navi-item-bendlme"><a href="/" title="Back to bendl.me">Back to bendl.me</a></li>
     </ul>
   </nav>
 </header>
@@ -41,14 +43,28 @@
     <section class="list section-list">
       <article class="article">
         <a href="/blog/posts/my-second-post/" class="article-titles">
-          <h2 class="article-title">My Second Post</h2>
+          <h2 class="article-title">Migrate to Hugo from Jekyll</h2>
           
         </a>
         <ul class="article-meta">
-          <li class="article-meta-date"><time>March 10, 2018</time></li>
+          <li class="article-meta-date"><time>March 10, 2014</time></li>
+          <li class="article-meta-tags">
+            <a href="/blog/tags/foo/">
+              <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#tag"></use></svg>
+              foo
+            </a>&nbsp;
+          </li>
+          <li class="article-meta-tags">
+            <a href="/blog/tags/bar/">
+              <svg class="icon"><use xlink:href="/blog/images/fa-solid.svg#tag"></use></svg>
+              bar
+            </a>&nbsp;
+          </li>
         </ul>
         <div class="article-content">
-          
+          Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &lt;root&gt;/ ▾ images/ logo.png  should become
+▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
         </div>
         <div class="article-readmore"><a href="/blog/posts/my-second-post/">Read more...</a></div>
         <div class="article-floatclear"></div>
@@ -61,7 +77,7 @@
 
 
 <div class="site-footer">
-  <div class="copyright">&copy; Copyright 2017 Your name</div>
+  <div class="copyright">&copy; Copyright 2018 Ben Lancaster</div>
   <ul class="site-footer-items">
     <li class="site-footer-item-rsslink">
       <a href="/blog/posts/index.xml" type="application/rss+xml" target="_blank" title="RSS">
@@ -83,7 +99,7 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'Toracking ID', 'auto');
+ga('create', 'UA-114668070-3', 'auto');
 ga('send', 'pageview');
 </script>
 

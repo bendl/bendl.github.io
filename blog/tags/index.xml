@@ -6,10 +6,29 @@
     <description>Recent content in Tags on Ben Lancaster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; Copyright 2017 Your name</copyright>
+    <copyright>&amp;copy; Copyright 2018 Ben Lancaster</copyright>
+    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://bendl.me/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bar</title>
+      <link>http://bendl.me/blog/tags/bar/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://bendl.me/blog/tags/bar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Foo</title>
+      <link>http://bendl.me/blog/tags/foo/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://bendl.me/blog/tags/foo/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

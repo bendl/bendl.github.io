@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://bendl.me/blog/posts/my-second-post/</loc>
-    <lastmod>2018-03-10T18:35:39+00:00</lastmod>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -16,8 +16,14 @@
   </url>
   
   <url>
+    <loc>http://bendl.me/blog/tags/bar/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://bendl.me/blog/</loc>
-    <lastmod>2018-03-10T18:35:39+00:00</lastmod>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -27,8 +33,14 @@
   </url>
   
   <url>
+    <loc>http://bendl.me/blog/tags/foo/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://bendl.me/blog/posts/</loc>
-    <lastmod>2018-03-10T18:35:39+00:00</lastmod>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -39,6 +51,7 @@
   
   <url>
     <loc>http://bendl.me/blog/tags/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

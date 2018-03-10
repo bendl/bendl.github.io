@@ -1,0 +1,54 @@
+body {
+    font-family: Calibri, sans-serif;
+    color:black;
+}
+
+.site-navi a {
+    color:royalblue;
+    text-decoration: none;
+    background:none;
+}
+
+a {
+    text-decoration: none;
+    background:rgb(240, 240, 240);
+    color:black;
+}
+
+a:hover {
+    color:royalblue;
+}
+
+.site-navi-items li {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.site-navi-items .site-navi-item-bendlme a {
+    color:#333;
+    padding:0 5px;
+}
+
+.home-list .article {
+    color:gray;
+}
+
+.home-list .article:hover {
+    color:black;
+    background:rgb(250, 250, 250);
+}
+
+.home-list .article .article-titles {
+    color:black;
+}
+
+.home-list .article .article-content h2 {
+    font-size:16px;
+}
+.home-list .article .article-content h3{
+    font-size:14px;
+}
+.home-list .article .article-content h4{
+    font-size:12px;
+}
