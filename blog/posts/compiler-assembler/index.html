@@ -7,9 +7,9 @@
   <meta property="og:title" content="Assembler Basics for Instruction Sets - Ben Lancaster" />
   <meta name="twitter:title" content="Assembler Basics for Instruction Sets - Ben Lancaster" />
   <meta name="description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
-struct prco_op_struct { // Encoded 16-bit instruction word // for printing to file unsigned short opcode; // Instruction parts // (opcode, register selects, immediates, etc.) unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information // function, data type, etc.">
+struct prco_op_struct { // Encoded 16-bit instruction word  // for printing to file  unsigned short opcode; // Instruction parts  // (opcode, register selects, immediates, etc.)  unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information  // function, data type, etc.">
   <meta property="og:description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
-struct prco_op_struct { // Encoded 16-bit instruction word // for printing to file unsigned short opcode; // Instruction parts // (opcode, register selects, immediates, etc.) unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information // function, data type, etc.">
+struct prco_op_struct { // Encoded 16-bit instruction word  // for printing to file  unsigned short opcode; // Instruction parts  // (opcode, register selects, immediates, etc.)  unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information  // function, data type, etc.">
   <meta name="twitter:description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
 struct …">
   <meta name="author" content="Ben Lancaster"/>
@@ -22,7 +22,6 @@ struct …">
   <link rel="stylesheet" href="/blog/css/syntax.css" media="all" />
   <link rel="stylesheet" href="/blog/css/custom.css" media="all" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet"> 
 </head>
 <body>
 
@@ -34,7 +33,6 @@ struct …">
       <li class="site-navi-item-categories"><a href="/blog/categories/" title="Categories">Categories</a></li>
       <li class="site-navi-item-tags"><a href="/blog/tags/" title="Tags">Tags</a></li>
       <li class="site-navi-item-archives"><a href="/blog/archives/" title="Archives">Archives</a></li>
-      <li class="site-navi-item-about"><a href="/blog/about/" title="About">About</a></li>
       <li class="site-navi-item-bendlme"><a href="/" title="Back to bendl.me">Back to bendl.me</a></li>
     </ul>
   </nav>
@@ -70,41 +68,43 @@ struct …">
 
 <p>The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the <code>struct prco_op_struct</code>.</p>
 
-<pre><code class="language-c">struct prco_op_struct {
-    // Encoded 16-bit instruction word
-    // for printing to file
-    unsigned short opcode;
+<div class="code">
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="k">struct</span> <span class="n">prco_op_struct</span> <span class="p">{</span>
+    <span class="c1">// Encoded 16-bit instruction word
+</span><span class="c1"></span>    <span class="c1">// for printing to file
+</span><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">opcode</span><span class="p">;</span>
 
-    // Instruction parts
-    // (opcode, register selects, immediates, etc.)
-    unsigned char op;
-    unsigned char regD  : 3;
-    unsigned char regA  : 3;
-    unsigned char imm8  : 8;
-    signed char   simm5 : 5;
+    <span class="c1">// Instruction parts
+</span><span class="c1"></span>    <span class="c1">// (opcode, register selects, immediates, etc.)
+</span><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">op</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="nl">regD</span>  <span class="p">:</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="nl">regA</span>  <span class="p">:</span> <span class="mi">3</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="nl">imm8</span>  <span class="p">:</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="kt">signed</span> <span class="kt">char</span>   <span class="nl">simm5</span> <span class="p">:</span> <span class="mi">5</span><span class="p">;</span>
     
-    // Optional AST pointer to provide extra information
-    // function, data type, etc.
-    void          *ast;
+    <span class="c1">// Optional AST pointer to provide extra information
+</span><span class="c1"></span>    <span class="c1">// function, data type, etc.
+</span><span class="c1"></span>    <span class="kt">void</span>          <span class="o">*</span><span class="n">ast</span><span class="p">;</span>
     
-    // Flags
-    unsigned int  asm_offset;
-    unsigned int  asm_flags;
-    char          *comment;
-    unsigned int  id;
-};
-</code></pre>
+    <span class="c1">// Flags
+</span><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">asm_offset</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">asm_flags</span><span class="p">;</span>
+    <span class="kt">char</span>          <span class="o">*</span><span class="n">comment</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">id</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
+</div>
 
 <h3 id="asm-flags">asm_flags</h3>
 
-<pre><code class="language-c">#define ASM_FUNC_EXIT   0x01
-#define ASM_FUNC_START  0x02
-#define ASM_IF_BRANCH   0x04
-#define ASM_IF_ELSE     0x08
-#define ASM_NOP_NOP     0x10
-#define ASM_FUNC_CALL   0x20
-#define ASM_CALL_NEXT   0x40
-</code></pre>
+<div class="code">
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define ASM_FUNC_EXIT   0x01
+</span><span class="cp">#define ASM_FUNC_START  0x02
+</span><span class="cp">#define ASM_IF_BRANCH   0x04
+</span><span class="cp">#define ASM_IF_ELSE     0x08
+</span><span class="cp">#define ASM_NOP_NOP     0x10
+</span><span class="cp">#define ASM_FUNC_CALL   0x20
+</span><span class="cp">#define ASM_CALL_NEXT   0x40</span></code></pre></div>
+</div>
 
 <h2 id="finding-jmp-locations">Finding JMP locations</h2>
 
@@ -112,13 +112,12 @@ struct …">
 1.  The order or list of instructions already pushed
 2.  Size of each pushed instruction</p>
 
-<p>In the VCC architecture, the JMP instruction jumps to the value in a selected register, so a JMP instruction will look like the following:</p>
-
-<pre><code class="language-as">MOVI 0xfe, Ax
-JMP  Ax
-</code></pre>
-
-<p>But how is the <code>0xfe</code> address calculated.</p>
+<p>In the VCC architecture, the JMP instruction jumps to the value in a selected register, so a JMP instruction will look like the following:
+<div class="code">
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="n">MOVI</span> <span class="mh">0xfe</span><span class="p">,</span> <span class="n">Ax</span>
+<span class="n">JMP</span>  <span class="n">Ax</span></code></pre></div>
+</div>
+But how is the <code>0xfe</code> address calculated.</p>
 
     </article>
 
@@ -134,20 +133,13 @@ JMP  Ax
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   </li>
   <li>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <g:plus action="share"></g:plus>
-  </li>
-  <li>
-    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="en" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-  </li>
-  <li>
-    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
-    <script>!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
   </li>
 </ul>
     <div class="disqus-comments">
@@ -177,17 +169,15 @@ JMP  Ax
       <li class="pager-newer">
           <a href="/blog/posts/my-second-post/" data-toggle="tooltip" data-placement="top" title="Migrate to Hugo from Jekyll">&lt; Newer</a>
       </li>
-      <li class="pager-older">
-        <a href="/blog/posts/my-first-post/" data-toggle="tooltip" data-placement="top" title="My First Post">Older &gt;</a>
-      </li>
+      <li class="pager-older pager-noitem">Older &gt;</li>
     </ul>
   </div>
 
 
 <div class="site-footer">
-  <div class="copyright">&copy; Copyright 2018 Ben Lancaster</div>
+  
   <ul class="site-footer-items">
-    <li class="site-footer-item-about"><a href="/blog/about/" title="About">About</a></li>
+    <li><a href="#">ben@bendl.me</a></li>
   </ul>
   <div class="powerdby">
     Powered by <a href="https://gohugo.io/">Hugo</a>

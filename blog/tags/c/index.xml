@@ -19,7 +19,7 @@
       
       <guid>http://bendl.me/blog/posts/compiler-assembler/</guid>
       <description>LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
-struct prco_op_struct { // Encoded 16-bit instruction word // for printing to file unsigned short opcode; // Instruction parts // (opcode, register selects, immediates, etc.) unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information // function, data type, etc.</description>
+struct prco_op_struct { // Encoded 16-bit instruction word  // for printing to file  unsigned short opcode; // Instruction parts  // (opcode, register selects, immediates, etc.)  unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information  // function, data type, etc.</description>
     </item>
     
   </channel>

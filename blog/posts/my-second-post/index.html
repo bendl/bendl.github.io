@@ -34,7 +34,6 @@
       <li class="site-navi-item-categories"><a href="/blog/categories/" title="Categories">Categories</a></li>
       <li class="site-navi-item-tags"><a href="/blog/tags/" title="Tags">Tags</a></li>
       <li class="site-navi-item-archives"><a href="/blog/archives/" title="Archives">Archives</a></li>
-      <li class="site-navi-item-about"><a href="/blog/about/" title="About">About</a></li>
       <li class="site-navi-item-bendlme"><a href="/" title="Back to bendl.me">Back to bendl.me</a></li>
     </ul>
   </nav>
@@ -274,20 +273,13 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10";
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   </li>
   <li>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <g:plus action="share"></g:plus>
-  </li>
-  <li>
-    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="en" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-  </li>
-  <li>
-    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
-    <script>!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
   </li>
 </ul>
     <div class="disqus-comments">
@@ -315,15 +307,17 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 
     <ul class="pager article-pager">
       <li class="pager-newer pager-noitem">&lt; Newer</li>
-      <li class="pager-older pager-noitem">Older &gt;</li>
+      <li class="pager-older">
+        <a href="/blog/posts/compiler-assembler/" data-toggle="tooltip" data-placement="top" title="Assembler Basics for Instruction Sets">Older &gt;</a>
+      </li>
     </ul>
   </div>
 
 
 <div class="site-footer">
-  <div class="copyright">&copy; Copyright 2018 Ben Lancaster</div>
+  
   <ul class="site-footer-items">
-    <li class="site-footer-item-about"><a href="/blog/about/" title="About">About</a></li>
+    <li><a href="#">ben@bendl.me</a></li>
   </ul>
   <div class="powerdby">
     Powered by <a href="https://gohugo.io/">Hugo</a>

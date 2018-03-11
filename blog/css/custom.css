@@ -26,6 +26,10 @@ a:hover {
     letter-spacing: -1px;
 }
 
+.site-navi .site-title {
+    letter-spacing: -1px;
+}
+
 .site-navi-items .site-navi-item-bendlme a {
     color:#333;
     padding:0 5px;
@@ -81,4 +85,9 @@ a:hover {
 .home-list .article .article-content h4{
     font-size:12px;
     font-weight: normal;
+}
+
+.code {
+    margin:0;
+    background:#eeeedd;
 }
