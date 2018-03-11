@@ -6,12 +6,9 @@
   <title>Assembler Basics for Instruction Sets - Ben Lancaster</title>
   <meta property="og:title" content="Assembler Basics for Instruction Sets - Ben Lancaster" />
   <meta name="twitter:title" content="Assembler Basics for Instruction Sets - Ben Lancaster" />
-  <meta name="description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
-struct prco_op_struct { // Encoded 16-bit instruction word  // for printing to file  unsigned short opcode; // Instruction parts  // (opcode, register selects, immediates, etc.)  unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information  // function, data type, etc.">
-  <meta property="og:description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
-struct prco_op_struct { // Encoded 16-bit instruction word  // for printing to file  unsigned short opcode; // Instruction parts  // (opcode, register selects, immediates, etc.)  unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information  // function, data type, etc.">
-  <meta name="twitter:description" content="LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.
-struct …">
+  <meta name="description" content="TEST POST LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.  1234567891011121314151617181920212223 struct prco_op_struct { // Encoded 16-bit instruction word  // for printing to file  unsigned short opcode;  // Instruction parts  // (opcode, register selects, immediates, etc.)  unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information  // function, data type, etc.">
+  <meta property="og:description" content="TEST POST LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.  1234567891011121314151617181920212223 struct prco_op_struct { // Encoded 16-bit instruction word  // for printing to file  unsigned short opcode;  // Instruction parts  // (opcode, register selects, immediates, etc.)  unsigned char op; unsigned char regD : 3; unsigned char regA : 3; unsigned char imm8 : 8; signed char simm5 : 5; // Optional AST pointer to provide extra information  // function, data type, etc.">
+  <meta name="twitter:description" content="TEST POST LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct. …">
   <meta name="author" content="Ben Lancaster"/>
   <meta property="og:site_name" content="Ben Lancaster" />
   <meta property="og:url" content="/blog/blog/posts/compiler-assembler/" />
@@ -64,16 +61,22 @@ struct …">
       
       
 
+<h2 id="test-post">TEST POST</h2>
+
 <h2 id="libccl-relocatable-to-absolute-machine-code">LIBCCL: Relocatable to Absolute Machine Code</h2>
 
-<p>The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the <code>struct prco_op_struct</code>.</p>
-
+<p>The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the <code>struct prco_op_struct</code>.
+<!--https://help.farbox.com/pygments.html-->
 <div class="code">
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="k">struct</span> <span class="n">prco_op_struct</span> <span class="p">{</span>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1</span><span class="lnt"> 2</span><span class="lnt"> 3</span><span class="hl"><span class="lnt"> 4</span></span><span class="lnt"> 5</span><span class="lnt"> 6</span><span class="lnt"> 7</span><span class="lnt"> 8</span><span class="lnt"> 9</span><span class="lnt">10</span><span class="lnt">11</span><span class="lnt">12</span><span class="lnt">13</span><span class="lnt">14</span><span class="lnt">15</span><span class="hl"><span class="lnt">16</span></span><span class="lnt">17</span><span class="lnt">18</span><span class="hl"><span class="lnt">19</span></span><span class="lnt">20</span><span class="lnt">21</span><span class="lnt">22</span><span class="lnt">23</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="k">struct</span> <span class="n">prco_op_struct</span> <span class="p">{</span>
     <span class="c1">// Encoded 16-bit instruction word
 </span><span class="c1"></span>    <span class="c1">// for printing to file
-</span><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">opcode</span><span class="p">;</span>
-
+</span><span class="hl"><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">opcode</span><span class="p">;</span>
+</span>
     <span class="c1">// Instruction parts
 </span><span class="c1"></span>    <span class="c1">// (opcode, register selects, immediates, etc.)
 </span><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">op</span><span class="p">;</span>
@@ -84,26 +87,34 @@ struct …">
     
     <span class="c1">// Optional AST pointer to provide extra information
 </span><span class="c1"></span>    <span class="c1">// function, data type, etc.
-</span><span class="c1"></span>    <span class="kt">void</span>          <span class="o">*</span><span class="n">ast</span><span class="p">;</span>
-    
+</span><span class="hl"><span class="c1"></span>    <span class="kt">void</span>          <span class="o">*</span><span class="n">ast</span><span class="p">;</span>
+</span>    
     <span class="c1">// Flags
-</span><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">asm_offset</span><span class="p">;</span>
-    <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">asm_flags</span><span class="p">;</span>
+</span><span class="hl"><span class="c1"></span>    <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">asm_offset</span><span class="p">;</span>
+</span>    <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">asm_flags</span><span class="p">;</span>
     <span class="kt">char</span>          <span class="o">*</span><span class="n">comment</span><span class="p">;</span>
     <span class="kt">unsigned</span> <span class="kt">int</span>  <span class="n">id</span><span class="p">;</span>
-<span class="p">};</span></code></pre></div>
+<span class="p">};</span></code></pre></td></tr></table>
 </div>
+</div>
+</div></p>
 
 <h3 id="asm-flags">asm_flags</h3>
 
 <div class="code">
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define ASM_FUNC_EXIT   0x01
-</span><span class="cp">#define ASM_FUNC_START  0x02
-</span><span class="cp">#define ASM_IF_BRANCH   0x04
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="hl"><span class="lnt">1</span></span><span class="hl"><span class="lnt">2</span></span><span class="lnt">3</span><span class="lnt">4</span><span class="lnt">5</span><span class="lnt">6</span><span class="hl"><span class="lnt">7</span></span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="hl"><span class="cp">#define ASM_FUNC_EXIT   0x01
+</span></span><span class="hl"><span class="cp">#define ASM_FUNC_START  0x02
+</span></span><span class="cp">#define ASM_IF_BRANCH   0x04
 </span><span class="cp">#define ASM_IF_ELSE     0x08
 </span><span class="cp">#define ASM_NOP_NOP     0x10
 </span><span class="cp">#define ASM_FUNC_CALL   0x20
-</span><span class="cp">#define ASM_CALL_NEXT   0x40</span></code></pre></div>
+</span><span class="hl"><span class="cp">#define ASM_CALL_NEXT   0x40</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 
 <h2 id="finding-jmp-locations">Finding JMP locations</h2>
@@ -114,8 +125,14 @@ struct …">
 
 <p>In the VCC architecture, the JMP instruction jumps to the value in a selected register, so a JMP instruction will look like the following:
 <div class="code">
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="n">MOVI</span> <span class="mh">0xfe</span><span class="p">,</span> <span class="n">Ax</span>
-<span class="n">JMP</span>  <span class="n">Ax</span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="lnt">1</span><span class="lnt">2</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">MOVI</span> <span class="mi">0xfe</span><span class="p">,</span> <span class="no">Ax</span>
+<span class="nf">JMP</span>  <span class="no">Ax</span></code></pre></td></tr></table>
+</div>
+</div>
 </div>
 But how is the <code>0xfe</code> address calculated.</p>
 
