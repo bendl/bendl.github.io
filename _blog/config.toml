@@ -1,5 +1,6 @@
 baseurl = "https://bendl.me/blog/"
 title = "Ben Lancaster"
+#theme = "hyde-y-master"
 theme = "whiteplain"
 languageCode = "en"
 

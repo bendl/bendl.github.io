@@ -7,26 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; Copyright 2018 Ben Lancaster</copyright>
-    <lastBuildDate>Mon, 10 Mar 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Mar 2018 20:39:57 +0000</lastBuildDate>
     
 	<atom:link href="https://bendl.me/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Bar</title>
-      <link>https://bendl.me/blog/tags/bar/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <title>C</title>
+      <link>https://bendl.me/blog/tags/c/</link>
+      <pubDate>Sat, 10 Mar 2018 20:39:57 +0000</pubDate>
       
-      <guid>https://bendl.me/blog/tags/bar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Foo</title>
-      <link>https://bendl.me/blog/tags/foo/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bendl.me/blog/tags/foo/</guid>
+      <guid>https://bendl.me/blog/tags/c/</guid>
       <description></description>
     </item>
     
