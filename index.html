@@ -47,6 +47,7 @@
       font-size: 280%;
       margin-bottom: 0px;
       font-family: sans-serif;
+      margin-left:-3px;
     }
 
     header p {
@@ -161,7 +162,7 @@
     <div class="row">
       <div class="four columns me-info" style="background:white;">
         <header>
-          <img src="images/me.jpg" width="275px">
+          <img src="images/me5.JPG" width="275px">
           <h1>Ben Lancaster</h1>
           <p><strong>Embedded Firmware/Software/FPGA</strong></p>
           <p>England, United Kingdom</p>
@@ -171,7 +172,7 @@
           <p><a href="https://github.com/bendl">github.com/bendl</a></p>
           <br>
           <p><a class="button" href="mailto:ben@bendl.me">Contact</a></p>
-          <p><a class="button" href="/Ben_Lancaster_ARM_graduate_SW.pdf">Download CV</a></p>
+          <p><a class="button" href="/Ben_Lancaster_ARM_graduate_HW.pdf">Download CV</a></p>
           <p><a class="button button-primary" href="/blog/">Blog</a></p>
         </header>
       </div>
@@ -228,12 +229,15 @@
                 Medical Electronics and E-Health
                 Mini Projects and Laboratory
                 Main Project
+                Secure Hardware Design
               -->
                 <ul>
+                  <li><strong>Final Project:</strong> <span class="highlight">Multi-core SoC Design and Implementation for FPGAs</span></li>
                   <li><span class="highlight">Digital Signal Processing for Communications</span></li>
                   <li><span class="highlight">FPGA Design for System-on-Chip</span></li>
                   <li><span class="highlight">Embedded Microprocessor System Design</span></li>
                   <li><span class="highlight">Medical Electronics and E-Health</span></li>
+                  <li><span class="highlight">Secure Hardware Design</span></li>
                 </ul>
             </p>
             <p></p>
@@ -249,15 +253,21 @@
             <p>
                 <ul>
                   <li>
-                      <strong>First Class Honours</strong><span> with Certificate of Professional Industrial Experience</span> 
+                      <strong>First Class Honours</strong> with <span class="highlight">Certificate of Professional Industrial Experience</span>
                   </li>
                   <li>
-                    <strong>Final Project:</strong> <span class="highlight">FPGA-based 16-bit RISC Processor Design</span>.
+                    <strong>Awards:</strong> <span class="highlight">Top Final Student in Computing</span> & <span class="highlight">Best Final Project</span>
+                  </li>
+                  <li>
+                    <strong>Revell Research Systems Prize Winner</strong>
+                  </li>
+                  <li>
+                    <strong>Final Project:</strong> <span class="highlight">FPGA-based 16-bit RISC Processor Design</span>
                   </li>
                   <li>
                       Courses include: <span class="highlight">Digital Electronics</span>, 
                       <span class="highlight">Embedded Systems and Compilers</span>, 
-                      <span class="highlight">Machine Vision</span>, <span class="highlight">Computation Theory</span>.
+                      <span class="highlight">Machine Vision</span>, <span class="highlight">Computation Theory</span>
                   </li>
                 </ul>
             </p>
@@ -270,6 +280,19 @@
           <div class="six columns">
             <section>
               <h1>Open Source Projects</h1>
+
+              <div class="item">
+                <header>
+                  <h1>Multi-core RISC SoC for FPGAs</h1>
+                  <span class="sub">
+                      <a href="https://github.com/bendl/vmicro16/blob/master/docs/reports/build/ELEC5881M_Ben_Lancaster_201280376_viva.pdf">bendl/vmicro16</a>
+                    </span>
+                </header>
+                <p>
+                    Multi-core RISC SoC with various peripherals including: watchdogs, timer interrupts, GPIO, UART, and more.
+                </p>
+              </div>
+
               <div class="item">
                 <header>
                   <h1>FPGA 16-bit Embedded Processor</h1>
@@ -282,6 +305,29 @@
                     featuring pipelining, on-chip memory, GPIO, and UART modules.
                   </p>
               </div>
+
+              <div class="item">
+                <header>
+                  <h1>Arm Cortex M0 Processor Board</h1>
+                  <span class="sub">
+                      <a href="https://github.com/bendl/armm0">bendl/armm0</a>
+                    </span>
+                </header>
+                <p>A 2-layer board for the Minispartan6+ FPGA development kit. Features an <span class="highlight">STM32F0 TSSOP processor</span>, mutliple power supplies, I2C, ICSP, and LEDs.</p>
+                <img src="images/armm0.JPG" width="70%">
+              </div>
+
+              <div class="item">
+                <header>
+                  <h1>FPGA and JTAG Development Board</h1>
+                  <span class="sub">
+                      <a href="https://github.com/bendl/osc1">bendl/osc1</a>
+                    </span>
+                </header>
+                <p>PCB board for the <a href="https://www.ftdichip.com/Support/Documents/DataSheets/Modules/DS_FT2232H_Mini_Module.pdf">FT2232H Mini Module</a> and <a href="https://tinyfpga.com/">TinyFPGA AX2</a> for testing <span class="highlight">JTAG</span> and <span class="highlight">I2C</span> implementations.</p>
+                <img src="images/ft2232h_tinyfpga.JPG" width="70%">
+              </div>
+
               <div class="item">
                 <header>
                   <h1>CFG Compiler and Assembler</h1>
@@ -290,9 +336,21 @@
                     </span>
                 </header>
                 <p><span class="highlight">Compiler</span> and <span class="highlight">assembler</span> for the <span class="highlight">PRCO</span> embedded processor. 
-                  Features simple optimisations including constant folding and unreachable code elimination.</p>
+                  Features simple <span class="highlight">optimisations</span> including constant folding and unreachable code elimination.</p>
               </div>
 
+              <div class="item">
+                <header>
+                  <h1>Parallel GPU/CUDA DFT Implementation</h1>
+                  <span class="sub">
+                      <a href="https://github.com/bendl/soft354">bendl/soft354</a>
+                    </span>
+                </header>
+                <p>Designed, implemented, and evaluated a parallel implementation of the Discrete Fourier Transform.</p>
+                <p>Read the <a href="https://github.com/bendl/soft354" class="highlight">methodology and results here</a>.</p>
+              </div>
+              
+              <!--
               <div class="item">
                 <header>
                   <h1>BugZilla Kanban Chrome Extension</h1>
@@ -302,9 +360,12 @@
                 </header>
                 <p>Chrome extension to view BugZilla bugs in a KanBan board. Sort by Assignee or Status.</p>
               </div>
+              -->
+
+              <a href="https://github.com/bendl">And more on Github...</a>
+
             </section>
           </div>
-
           <div class="six columns">
             <section>
               <h1>Contributions</h1>
@@ -321,8 +382,11 @@
             <section>
               <h1>Skills</h1>
               <div class="item">
-                <p>C, C++, Embedded Systems, PIC, ARM, Linux Kernel, Verilog, Python, Haskell</p>
+                <p>Verilog, SystemVerilog, Formal verification, UVM, AMBA, FPGA</p>
               </div>
+            </section>
+	    <section>
+              <h1>Publications</h1>
             </section>
           </div>
         </div>

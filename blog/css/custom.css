@@ -3,6 +3,10 @@ body {
     background:white;
 }
 
+.list .article {
+    margin:0;
+}
+
 .site-navi a {
     color:royalblue;
     text-decoration: none;
