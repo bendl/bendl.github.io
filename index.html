@@ -27,7 +27,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  
+
   <style>
     body {
       margin-top:50px;
@@ -59,7 +59,7 @@
       margin:0;
       margin-bottom:10px;
     }
-    
+
     section > h1 {
       margin-bottom:5px;
       font-size: 140%;
@@ -86,7 +86,7 @@
     div.item p {
       margin:0;
     }
-    
+
     div.item p:last-child {
       margin-bottom:20px;
     }
@@ -98,7 +98,7 @@
     }
 
     div.item ul li {
-      padding:0;  
+      padding:0;
       margin:0;
     }
 
@@ -129,12 +129,12 @@
     .me-info {
       text-align: center;
     }
-    
+
     .button.button-primary {
         background: royalblue;
         border-color:royalblue;
     }
-	
+
 	.button.button-primary:hover {
         background:white;
         border-color:royalblue;
@@ -165,8 +165,8 @@
         <header>
           <img src="images/me5.JPG" width="275px">
           <h1>Ben Lancaster</h1>
-          <p><strong>RISC, SoCs, Embedded Systems</strong></p>
-          <p>England, United Kingdom</p>
+          <p>Graduate Hardware Engineer at ARM working on on-chip interconnects</p>
+          <!--<p>England, United Kingdom</p>-->
           <hr>
           <p><a href="mailto:ben@bendl.me">ben@bendl.me</a></p>
           <p><a href="https://uk.linkedin.com/in/bendl">linkedin.com/in/bendl</a></p>
@@ -174,10 +174,10 @@
           <br>
           <p><a class="button" href="mailto:ben@bendl.me">Contact</a></p>
           <p><a class="button" href="/Ben_Lancaster_ARM_graduate_HW.pdf">Download CV</a></p>
-          <p><a class="button button-primary" href="/blog/">Blog</a></p>
+          <!--<p><a class="button button-primary" href="/blog/">Blog</a></p>-->
         </header>
       </div>
-      
+
       <div class="eight columns">
 
         <section>
@@ -189,6 +189,12 @@
                 <a href="https://arm.com/">ARM</a> — United Kingdom — September 2019-present
               </span>
             </header>
+            <p>
+              <ul>
+                <li><span class="highlight">RTL Design</span> &amp; <span class="highlight">verification</span> of System-on-chip <span class="highlight">interconnects</span>.</li>
+                <li>Block-level <span class="highlight">formal verification</span> using <span class="highlight">SVA</span></li>
+              </ul>
+            </p>
           </div>
           <div class="item">
             <header>
@@ -199,7 +205,6 @@
             </header>
             <p>
               <ul>
-                <li><span class="highlight">Linux USB and PCIe kernel driver</span> development.</li>
                 <li><span class="highlight">Embedded programming</span> on <span class="highlight">Xilinx MicroBlaze FPGAs</span> and <span class="highlight">PIC16/24 microcontrollers</span>.</li>
                 <li>Implemented on-chip power levelling and calibration for <span class="highlight">GNSS</span> <span class="highlight">RF signal generators</span>.</li>
                 <li>Controlling on-board fans, LEDs, EEPROM, and other peripherals with <span class="highlight">I2C</span> and <span class="highlight">SMBus</span>.</li>
@@ -215,7 +220,7 @@
             <header>
               <h1>MSc(Eng) Embedded Systems Engineering</h1>
               <span class="sub">
-                <a href="https://www.leeds.ac.uk/">University of Leeds</a> — United Kingdom — 2018-2019 (Current)
+                <a href="https://www.leeds.ac.uk/">University of Leeds</a> — United Kingdom — 2018-2019
               </span>
             </header>
             <p>
@@ -230,13 +235,15 @@
                 Secure Hardware Design
               -->
                 <ul>
+                  <li><strong>Pass with Distinction ~86%</strong></li>
                   <li><strong>Final Project:</strong> <span class="highlight">Multi-core SoC Design and Implementation for FPGAs</span></li>
-                  <li><span class="highlight">Digital Signal Processing for Communications</span></li>
                   <li><span class="highlight">FPGA Design for System-on-Chip</span></li>
                   <li><span class="highlight">Embedded Microprocessor System Design</span></li>
-                  <li><span class="highlight">Medical Electronics and E-Health</span></li>
-                  <li><span class="highlight">Secure Hardware Design</span></li>
+                  <li>Digital Signal Processing for Communications</li>
+                  <li>Medical Electronics and E-Health</li>
+                  <li>Secure Hardware Design</li>
                 </ul>
+
             </p>
             <p></p>
           </div>
@@ -263,21 +270,33 @@
                     <strong>Final Project:</strong> <span class="highlight">FPGA-based 16-bit RISC Processor Design</span>
                   </li>
                   <li>
-                      Courses include: <span class="highlight">Digital Electronics</span>, 
-                      <span class="highlight">Embedded Systems and Compilers</span>, 
+                      Courses include: <span class="highlight">Digital Electronics</span>,
+                      <span class="highlight">Embedded Systems and Compilers</span>,
                       <span class="highlight">Machine Vision</span>, <span class="highlight">Computation Theory</span>
                   </li>
                 </ul>
             </p>
             <p></p>
           </div>
-          
+
         </section>
-          
+
         <div class="row">
           <div class="six columns">
             <section>
               <h1>Open Source Projects</h1>
+
+              <div class="item">
+                <header>
+
+                  <h1>Clustered SoC with multiple interconnects</h1>
+                  <span class="sub">
+                    <a href="https://github.com/bendl/vmicro16_cluster_soc">bendl/vmicro16_cluster_soc</a>
+                  </span>
+                </header>
+                <p>Latency improvements for the Vmicro16 SoC by clustering cores into multiple groups and using multiple-level interconnects.</p>
+                <img src="images/vmicro16_cluster_soc_small.png" width="80%">
+              </div>
 
               <div class="item">
                 <header>
@@ -299,7 +318,7 @@
                     </span>
                 </header>
                 <p>
-                    16-bit RISC <span class="highlight">processor design</span> and implementation for <span class="highlight">Xilinx Spartan-6 FPGAs</span> 
+                    16-bit RISC <span class="highlight">processor design</span> and implementation for <span class="highlight">Xilinx Spartan-6 FPGAs</span>
                     featuring pipelining, on-chip memory, GPIO, and UART modules.
                   </p>
               </div>
@@ -333,7 +352,7 @@
                       <a href="https://github.com/bendl/prco304">bendl/prco304/prco_compiler</a>
                     </span>
                 </header>
-                <p><span class="highlight">Compiler</span> and <span class="highlight">assembler</span> for the <span class="highlight">PRCO</span> embedded processor. 
+                <p><span class="highlight">Compiler</span> and <span class="highlight">assembler</span> for the <span class="highlight">PRCO</span> embedded processor.
                   Features simple <span class="highlight">optimisations</span> including constant folding and unreachable code elimination.</p>
               </div>
 
@@ -347,7 +366,7 @@
                 <p>Designed, implemented, and evaluated a parallel implementation of the Discrete Fourier Transform.</p>
                 <p>Read the <a href="https://github.com/bendl/soft354" class="highlight">methodology and results here</a>.</p>
               </div>
-              
+
               <!--
               <div class="item">
                 <header>
@@ -389,7 +408,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 
 
