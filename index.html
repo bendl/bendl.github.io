@@ -135,10 +135,10 @@
         border-color:royalblue;
     }
 
-	.button.button-primary:hover {
+  .button.button-primary:hover {
         background:white;
         border-color:royalblue;
-		color:royalblue;
+        color:royalblue;
     }
 
     /* Larger than tablet */
@@ -153,6 +153,41 @@
       }
     }
 
+    @media (prefers-color-scheme: dark) {
+      html {
+        background:black;
+        color: white;
+      }
+
+      body {
+        margin-top:50px;
+        color:white;
+        font-family: 'Calibri', sans-serif;
+        font-size: 16px;
+      }
+      a {
+        text-decoration: none;
+        background:rgb(40, 40, 40);
+        color:white;
+      }
+      strong {
+        color:white;
+      }
+      .button {
+        color:white;
+      }
+      a:visited {
+        color: inherit;
+      }
+      div.item header span.sub {
+        color:rgb(202, 202, 202);
+      }
+      div.item header h1 {
+        color: gold;
+      }
+      header h1, section h1 {
+        color:dodgerblue;
+      }
   </style>
 </head>
 <body>
@@ -191,8 +226,8 @@
             </header>
             <p>
               <ul>
-                <li><span class="highlight">RTL Design</span> &amp; <span class="highlight">verification</span> of System-on-chip <span class="highlight">interconnects</span>.</li>
-                <li>Block-level <span class="highlight">formal verification</span> using <span class="highlight">SVA</span></li>
+                <li>Microarchitectural <span class="highlight">RTL Design</span> and <span class="highlight">verification</span> for SoC interconnects, MMUs, and more.</li>
+                <li><span class="highlight">Formal verification</span> using <span class="highlight">SVA</span>.</li>
               </ul>
             </p>
           </div>
@@ -399,7 +434,7 @@
             <section>
               <h1>Skills</h1>
               <div class="item">
-                <p>Verilog, SystemVerilog, Formal verification, UVM, AMBA, FPGA</p>
+                <p>Verilog, SystemVerilog, FPGA, CPU uarch, ASIC flows, Formal verification, UVM, AMBA</p>
               </div>
             </section>
 	    <section>
