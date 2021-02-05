@@ -1,25 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>C on Ben Lancaster</title>
-    <link>https://bendl.me/blog/tags/c/</link>
-    <description>Recent content in C on Ben Lancaster</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy; Copyright 2018 Ben Lancaster</copyright>
-    <lastBuildDate>Sat, 10 Mar 2018 20:39:57 +0000</lastBuildDate>
-    
-	<atom:link href="https://bendl.me/blog/tags/c/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Test Post</title>
-      <link>https://bendl.me/blog/posts/test-post/</link>
-      <pubDate>Sat, 10 Mar 2018 20:39:57 +0000</pubDate>
-      
-      <guid>https://bendl.me/blog/posts/test-post/</guid>
-      <description>TEST POST LIBCCL: Relocatable to Absolute Machine Code The libccl compiler stores all information required to transform relocatable assembly to absolute assembly in the struct prco_op_struct.  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  struct prco_op_struct {// Encoded 16-bit instruction word // for printing to file unsigned short opcode;// Instruction parts // (opcode, register selects, immediates, etc.</description>
-    </item>
-    
-  </channel>
-</rss>

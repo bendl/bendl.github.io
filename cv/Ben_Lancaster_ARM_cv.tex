@@ -1,0 +1,249 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: 
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+%\usepackage[sfdefault]{FiraSans}
+%\usepackage[sfdefault]{roboto}
+%\usepackage[sfdefault]{noto-sans}
+%\usepackage{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+
+%\usepackage[default]{sourcesanspro}
+
+% serif
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlist[itemize]{leftmargin=1.5cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-15pt}\raggedright%\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-5pt}}
+  }
+}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\newcommand{\resumeSubheading}[3]{
+    \begin{center}
+    \begin{tabularx}{1\textwidth}{XP{9.4cm}r}
+      \small\textbf{#1} & \textbf{#2} & \textbf{#3}
+    \end{tabularx}\vspace{-7pt}
+    \end{center}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+%\renewcommand\labelitemii{$\vcenter{\hbox{\large\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label={\large\textbullet}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{10pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\iffalse
+\begin{center}
+    \textbf{\Huge \scshape Ben Lancaster} \\ \vspace{5pt}
+    \small (+44) 07722 358258 $|$ \href{mailto:ben@bendl.me}{\underline{ben@bendl.me}} $|$ 
+    \href{https://uk.linkedin.com/in/bendl}{\underline{uk.linkedin.com/in/bendl}} $|$
+    \href{https://github.com/bendl}{\underline{github.com/bendl}}
+\end{center}
+\fi
+
+%\iffalse
+\begin{minipage}{4in}
+    \textbf{\Huge Ben Lancaster}\\
+    07722 358258 \href{mailto:ben@bendl.me}{ben@bendl.me}\\
+    England, United Kingdom
+\end{minipage}
+    \hfill
+\begin{minipage}{3in}
+\begin{flushright}
+    \href{https://uk.linkedin.com/in/bendl}{https://uk.linkedin.com/in/bendl}\\
+    \href{https://github.com/bendl}{https://github.com/bendl}  \\
+    \href{https://bendl.me}{https://bendl.me}
+\end{flushright}
+\end{minipage}
+\vspace{15pt}
+%\fi
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+    \begin{tabularx}{1\textwidth}{p{8cm}Xr}
+      \small\textbf{RTL Design Engineer} & \small\textbf{ARM Limited} & \small\textbf{September 2019 -- present}
+    \end{tabularx}\vspace{-3pt}
+    %\resumeSubheading{RTL Design Engineer}{ARM Limited}{September 2019 -- present}
+    \resumeItemListStart
+        \resumeItem{Design and verification of various Systems and Interconnect IP using SystemVerilog.}
+        \resumeItem{IP requirements capture and specification.}
+        \resumeItem{Programmers-view RTL for memory-mapped peripherals.}
+        \resumeItem{Automation and rendering flows for generating RTL/UVM from machine-readable specifications.}
+        \resumeItem{Physical implementation trials using Cadence and Synopsys tooling flows.}
+        \resumeItem{Verification of AMBA protocols and other on-chip interfaces.}
+    \resumeItemListEnd
+
+    \begin{tabularx}{1\textwidth}{p{7cm}Xr}
+      \small\textbf{Firmware Engineer, Placement} & \small\textbf{Spirent Communications} & \small\textbf{June 2016 -- August 2017}  \\
+    \end{tabularx}\vspace{-3pt}
+    %\resumeSubheading{Firmware Engineer, Placement}{Spirent Communications}{June 2016 -- August 2017}
+        \resumeItemListStart
+        \resumeItem{Embedded programming on Xilinx MicroBlaze FPGAs and PIC16/24 microcontrollers.}
+\resumeItem{Implemented on-chip power levelling and calibration for GNSS RF signal generators.}
+\resumeItem{Controlling on-board fans, LEDs, EEPROM, and other peripherals with I2C and SMBus.}
+\resumeItem{Configuring, building, and maintaining Embedded Linux distributions using Yocto.}
+\resumeItem{Linux USB kernel driver development.}
+    \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+    \begin{tabularx}{1\textwidth}{p{7.8cm}Xr}
+      \small\textbf{MSc (Eng) Embedded Systems Engineering} & \small\textbf{University of Leeds} & \small\textbf{2018-2019} \\
+    \end{tabularx}\vspace{-3pt}
+    \resumeItemListStart
+\resumeItem{86\%, Final Project: Multi-core RISC SoC Design and Implementation for FPGAs.}
+\resumeItem{Courses include: FPGA Design for System-on-Chip, Digital Signal Processing for Communications,
+Embedded Microprocessor System Design, Circuits, Medical Electronics and E-Health}
+    \resumeItemListEnd
+    %\resumeSubheading{MSc (Eng) Embedded Systems Engineering}{University of Leeds}{2018-2019}
+    
+    \begin{tabularx}{1\textwidth}{p{7.5cm}Xr}
+      \small\textbf{BSc (Hons) Computer Science} & \small\textbf{University of Plymouth} & \small\textbf{2014 – 2018}  \\
+    \end{tabularx}\vspace{-3pt}
+    \resumeItemListStart
+    \resumeItem{Top Final Year Student, Best Final Project, Revell Research Systems Price}
+\resumeItem{Final Project: FPGA-based 16-bit RISC soft-microprocessor (with IO \& interrupts) and Compiler.}
+\resumeItem{First Class Honours with Certificate of Professional Industrial Experience.}
+\resumeItem{Courses: Digital Electronics, Embedded Systems and Compilers, Machine Vision, Parallel Computation.}
+    \resumeItemListEnd
+    %\resumeSubheading{MSc (Eng) Embedded Systems Engineering}{University of Leeds}{2018-2019}
+
+
+%-----------PROJECTS-----------
+\section{OPEN-SOURCE PROJECTS \& CONTRIBUTIONS}
+    \resumeItemListStart
+\resumeItem{Multi-core RISC System-on-Chip bendl/vmicro16 Up to 96 cores on Spartan-6 and Cyclone V FPGAs.}
+\resumeItem{16-bit RISC soft-microprocessor bendl/prco304 An FPGA-based RISC soft-microprocessor written in
+Verilog, complete with Compiler and programming language.}
+\resumeItem{ARM Cortex M0 Processor Board bendl/armm0 A 2-layer board for the Minispartan6+ FPGA
+development kit. Features an STM32F0 TSSOP processor, dual power supplies, I2C, ICSP, and LEDs.}
+    \resumeItemListEnd
+
+%-----------AWARDS-----------
+\section{ADDITIONAL EXPERIENCE \& AWARDS}
+    \vspace{-15pt}
+\begin{multicols}{2}
+    \resumeItemListStart
+    \resumeItem{Top Final Year Student}
+    \resumeItem{Best Final Project}
+    \resumeItemListEnd
+\columnbreak
+    \resumeItemListStart
+    \resumeItem{Dean’s List 2015-2018 member}
+    \resumeItem{Revell Research Systems Prize}
+    \resumeItemListEnd
+\end{multicols}\vspace{5pt}
+
+%-----------PROJECTS-----------
+\section{TECHNOLOGIES}
+    \resumeItemListStart
+\resumeItem{Digital Design, CMOS, IC Design}
+\resumeItem{IP Integration}
+\resumeItem{Verilog, SystemVerilog}
+\resumeItem{Cadence, Xilinx/Altera FPGAs, Vivado/ISE, Quartus, }
+\resumeItem{C, C++, Python, Linux (user + kernel), Bash, Make, CUDA}
+    \resumeItemListEnd
+
+
+%-------------------------------------------
+\end{document}
