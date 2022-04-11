@@ -30,13 +30,13 @@
 %\usepackage[sfdefault]{FiraSans}
 %\usepackage[sfdefault]{roboto}
 %\usepackage[sfdefault]{noto-sans}
-%\usepackage{helvet}
+\usepackage{helvet}
 %\renewcommand*\familydefault{\sfdefault}
 
 %\usepackage[default]{sourcesanspro}
 
 % serif
-\usepackage{charter}
+%\usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -75,39 +75,32 @@
   }
 }
 
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-
-\newcommand{\resumeSubheading}[3]{
-    \begin{center}
-    \begin{tabularx}{1\textwidth}{XP{9.4cm}r}
-      \small\textbf{#1} & \textbf{#2} & \textbf{#3}
-    \end{tabularx}\vspace{-7pt}
-    \end{center}
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2}
-    \end{tabular*}\vspace{-7pt}
+%\begin{tabularx}{1\textwidth}{p{8cm}Xr}
+%  \small\textbf{RTL Design Engineer} & \small\textbf{ARM Limited} & %\small\textbf{September 2019 -- present}
+%\end{tabularx}\vspace{-3pt}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-3pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2
-    \end{tabular*}\vspace{-7pt}
-}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
 
-%\renewcommand\labelitemii{$\vcenter{\hbox{\large\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[label={\large\textbullet}]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{10pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -147,85 +140,52 @@
 \vspace{15pt}
 %\fi
 
+
 %-----------EXPERIENCE-----------
 \section{EXPERIENCE}
-    \begin{tabularx}{1\textwidth}{p{8cm}Xr}
-      \small\textbf{RTL Design Engineer} & \small\textbf{ARM Limited} & \small\textbf{September 2019 -- present}
-    \end{tabularx}\vspace{-3pt}
-    %\resumeSubheading{RTL Design Engineer}{ARM Limited}{September 2019 -- present}
+    \resumeSubheading{Arm - Central Engineering Systems IP}{September 2019 -- present}{RTL Design Engineer}{United Kingdom}
     \resumeItemListStart
-        \resumeItem{Design and verification of various Systems and Interconnect IP using SystemVerilog.}
-        \resumeItem{IP requirements capture and specification.}
-        \resumeItem{Programmers-view RTL for memory-mapped peripherals.}
-        \resumeItem{Automation and rendering flows for generating RTL/UVM from machine-readable specifications.}
-        \resumeItem{Physical implementation trials using Cadence and Synopsys tooling flows.}
-        \resumeItem{Verification of AMBA protocols and other on-chip interfaces.}
+        \resumeItem{Worked on micro-architecture specification and RTL design of a fully-coherent System Level Cache for an upcoming 5nm IP targeting high-end smart phones.}
+        \resumeItem{Responsible for the programming architecture, configuration register network, register block design, for distributing configuration registers throughout a design for an upcoming IP.}
+        \resumeItem{Created automation and rendering flows for generating synthesisable SystemVerilog RTL from machine-readable specifications.}
+        \resumeItem{Designed and implemented post-silicon debug features for MMU-700's Translation Buffer and Translation Control Unit compatible with Arm CoreSight ELA-600.}
+        \resumeItem{Experience using physical implementations flows from Cadence to understand and improve design PPA.}
+        \resumeItem{Experience implementing AMBA interfaces including CHI, AXI, and APB.}
+    \resumeItemListEnd
+    \vspace{15pt}
+    \resumeSubheading{Spirent Communications}{June 2016 - August 2017}{Firmware Engineer, Placement}{United Kingdom}
+    \resumeItemListStart
+        \resumeItem{Using Xilinx Virtex UltraScale+/Spartan FPGAs for RF signal generation (UHF).}
+        \resumeItem{Embedded C programming for Xilinx MicroBlaze and PIC16/24 micro-controllers.}
+        \resumeItem{Controlling EEPROMs, LEDs, on-board fans, and other peripherals with I2C and SMBus.}
+        \resumeItem{Configuring, building, and maintaining Embedded Linux distributions using Yocto.}
+        \resumeItem{Linux USB and PCIe kernel driver development.}
     \resumeItemListEnd
 
-    \begin{tabularx}{1\textwidth}{p{7cm}Xr}
-      \small\textbf{Firmware Engineer, Placement} & \small\textbf{Spirent Communications} & \small\textbf{June 2016 -- August 2017}  \\
-    \end{tabularx}\vspace{-3pt}
-    %\resumeSubheading{Firmware Engineer, Placement}{Spirent Communications}{June 2016 -- August 2017}
-        \resumeItemListStart
-        \resumeItem{Embedded programming on Xilinx MicroBlaze FPGAs and PIC16/24 microcontrollers.}
-\resumeItem{Implemented on-chip power levelling and calibration for GNSS RF signal generators.}
-\resumeItem{Controlling on-board fans, LEDs, EEPROM, and other peripherals with I2C and SMBus.}
-\resumeItem{Configuring, building, and maintaining Embedded Linux distributions using Yocto.}
-\resumeItem{Linux USB kernel driver development.}
-    \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-
-%-----------EDUCATION-----------
+\vspace{10pt}
 \section{EDUCATION}
-    \begin{tabularx}{1\textwidth}{p{7.8cm}Xr}
-      \small\textbf{MSc (Eng) Embedded Systems Engineering} & \small\textbf{University of Leeds} & \small\textbf{2018-2019} \\
-    \end{tabularx}\vspace{-3pt}
+    \resumeSubheading{University of Leeds}{2018 -- 2019}{MSc (Eng) Embedded Systems Engineering}{United Kingdom}
     \resumeItemListStart
-\resumeItem{86\%, Final Project: Multi-core RISC SoC Design and Implementation for FPGAs.}
-\resumeItem{Courses include: FPGA Design for System-on-Chip, Digital Signal Processing for Communications,
-Embedded Microprocessor System Design, Circuits, Medical Electronics and E-Health}
+        \resumeItem{86\%, Final Project: Multi-core RISC SoC Design and Implementation for FPGAs.}
+        \resumeItem{Courses include: FPGA Design for System-on-Chip, Digital Signal Processing for Communications, Embedded
+Microprocessor System Design, Circuits, Medical Electronics and E-Health}
     \resumeItemListEnd
-    %\resumeSubheading{MSc (Eng) Embedded Systems Engineering}{University of Leeds}{2018-2019}
     
-    \begin{tabularx}{1\textwidth}{p{7.5cm}Xr}
-      \small\textbf{BSc (Hons) Computer Science} & \small\textbf{University of Plymouth} & \small\textbf{2014 – 2018}  \\
-    \end{tabularx}\vspace{-3pt}
+     \vspace{10pt}
+     \resumeSubheading{University of Plymouth}{2014 -- 2018}{BSc (Hons) Computer Science}{United Kingdom}
     \resumeItemListStart
-    \resumeItem{Top Final Year Student, Best Final Project, Revell Research Systems Price}
-\resumeItem{Final Project: FPGA-based 16-bit RISC soft-microprocessor (with IO \& interrupts) and Compiler.}
-\resumeItem{First Class Honours with Certificate of Professional Industrial Experience.}
-\resumeItem{Courses: Digital Electronics, Embedded Systems and Compilers, Machine Vision, Parallel Computation.}
-    \resumeItemListEnd
-    %\resumeSubheading{MSc (Eng) Embedded Systems Engineering}{University of Leeds}{2018-2019}
-
-
-%-----------PROJECTS-----------
-\section{OPEN-SOURCE PROJECTS \& CONTRIBUTIONS}
-    \resumeItemListStart
-\resumeItem{Multi-core RISC System-on-Chip bendl/vmicro16 Up to 96 cores on Spartan-6 and Cyclone V FPGAs.}
-\resumeItem{16-bit RISC soft-microprocessor bendl/prco304 An FPGA-based RISC soft-microprocessor written in
-Verilog, complete with Compiler and programming language.}
-\resumeItem{ARM Cortex M0 Processor Board bendl/armm0 A 2-layer board for the Minispartan6+ FPGA
-development kit. Features an STM32F0 TSSOP processor, dual power supplies, I2C, ICSP, and LEDs.}
+        \resumeItem{Top Final Year Student, Best Final Project, Revell Research Systems Price}
+        \resumeItem{Final Project: FPGA-based 16-bit RISC soft-microprocessor (with IO \& interrupts) and CFG Compiler}
+        \resumeItem{Courses: Digital Electronics, Embedded Systems and Compilers, Machine Vision, Parallel Computation}
     \resumeItemListEnd
 
-%-----------AWARDS-----------
+\vspace{10pt}
 \section{ADDITIONAL EXPERIENCE \& AWARDS}
     \vspace{-15pt}
 \begin{multicols}{2}
     \resumeItemListStart
-    \resumeItem{Top Final Year Student}
     \resumeItem{Best Final Project}
+    \resumeItem{Top Final Year Student}
     \resumeItemListEnd
 \columnbreak
     \resumeItemListStart
@@ -235,15 +195,12 @@ development kit. Features an STM32F0 TSSOP processor, dual power supplies, I2C, 
 \end{multicols}\vspace{5pt}
 
 %-----------PROJECTS-----------
-\section{TECHNOLOGIES}
+\section{OPEN-SOURCE PROJECTS \& CONTRIBUTIONS}
     \resumeItemListStart
-\resumeItem{Digital Design, CMOS, IC Design}
-\resumeItem{IP Integration}
-\resumeItem{Verilog, SystemVerilog}
-\resumeItem{Cadence, Xilinx/Altera FPGAs, Vivado/ISE, Quartus, }
-\resumeItem{C, C++, Python, Linux (user + kernel), Bash, Make, CUDA}
-    \resumeItemListEnd
-
+    \resumeItem{Multi-core RISC System-on-Chip. Can fit up to 96 cores on Spartan-6 and Cyclone V FPGAs.}
+    \resumeItem{16-bit RISC ISA and FPGA CPU. Written in Verilog, complete with Compiler for C-like programming language.}
+    \resumeItem{Custom PCB with an ST Cortex M0 and debuggering header. A 2-layer board for the Minispartan6+ FPGA development kit. Features an STM32F0 TSSOP processor, dual power supplies, I2C, ICSP, and LEDs.}
+\resumeItemListEnd
 
 %-------------------------------------------
 \end{document}
