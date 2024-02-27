@@ -99,7 +99,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=10mm]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -117,7 +117,7 @@
 \iffalse
 \begin{center}
     \textbf{\Huge \scshape Ben Lancaster} \\ \vspace{5pt}
-    \small (+44) 07722 358258 $|$ \href{mailto:ben@bendl.me}{\underline{ben@bendl.me}} $|$ 
+    \small (+44) 07722 358258 $|$ \href{ben.lancaster.msc@gmail.com}{\underline{ben.lancaster.msc@gmail.com}} $|$ 
     \href{https://uk.linkedin.com/in/bendl}{\underline{uk.linkedin.com/in/bendl}} $|$
     \href{https://github.com/bendl}{\underline{github.com/bendl}}
 \end{center}
@@ -126,57 +126,90 @@
 %\iffalse
 \begin{minipage}{4in}
     \textbf{\Huge Ben Lancaster}\\
-    07722 358258 \href{mailto:ben@bendl.me}{ben@bendl.me}\\
-    England, United Kingdom
+    \href{mailto:ben.lancaster.msc@gmail.com}
+    {ben.lancaster.msc@gmail.com}\\
+    07722 358258
 \end{minipage}
     \hfill
 \begin{minipage}{3in}
 \begin{flushright}
     \href{https://uk.linkedin.com/in/bendl}{https://uk.linkedin.com/in/bendl}\\
     \href{https://github.com/bendl}{https://github.com/bendl}  \\
-    \href{https://bendl.me}{https://bendl.me}
+    
 \end{flushright}
 \end{minipage}
 \vspace{15pt}
 %\fi
 
+\iffalse
+\section{SUMMARY}
+Passionate about CPU design and saving clock cycles.
+\vspace{15pt}
+\fi
 
-%-----------EXPERIENCE-----------
 \section{EXPERIENCE}
-    \resumeSubheading{Arm - Central Engineering}{2019 -- present}{RTL Design Engineer}{United Kingdom}
+    \resumeSubheading
+    {Senior CPU Design Engineer}
+    {2019 -- present}
+    {Arm Ltd - Processor Design Group}
+    {Cambridge, UK}
     \resumeItemListStart
-        \resumeItem{Worked on micro-architecture specification and RTL design of a fully-coherent System Level Cache for an upcoming 5nm IP targeting high-end smartphones.}
-        \resumeItem{Responsible for the programming architecture, configuration register network, register block design, for distributing configuration registers throughout a design for an upcoming IP.}
-        \resumeItem{Created automation and rendering flows for generating synthesisable SystemVerilog RTL from machine-readable specifications.}
-        \resumeItem{Designed and implemented post-silicon debug features for MMU-700's Translation Buffer and Translation Control Unit compatible with Arm CoreSight ELA-600.}
-        \resumeItem{Experience using physical implementations flows from Cadence to understand and improve design PPA.}
-        \resumeItem{Experience implementing AMBA interfaces including CHI, AXI, and APB.}
+    
+\resumeItem{Micro-architecture specification and RTL design for A-class CPUs and multi-core clusters for client market targeting smartphones and large screen compute devices.}
+
+\resumeItem{Responsible for power/clock/reset logic for upcoming A-class CPUs featuring multiple power/clock/reset domains and crossings. Experience with CDC and RDC analysis.}
+
+\resumeItem{Extended CPU IP products to support ASIL B/D for automotive and safety critical applications (ISO 26262).}
+
+\resumeItem{Unit design lead for for Memory system filtering unit, MPAM, and RAS units for an upcoming System IP.}
+
+%\resumeItem{Worked on micro-architecture specification and RTL design of a fully-coherent System Level Cache for an upcoming 5nm IP targeting high-end smartphones.}
+
+\resumeItem{Contributions to design of a fully-coherent L3 System Level Cache using AMBA CHI and AXI5.}
+
+\resumeItem{Created automation flows for generating synthesizable SystemVerilog RTL from machine-readable specifications.}
+
+\resumeItem{Experience implementing AMBA interfaces including CHI, AXI, and APB.}
+
+%\resumeItem{Designed and implemented a post-silicon debug feature for MMU-700's Translation Buffer and Translation Control Unit compatible with Arm CoreSight ELA-600.}
     \resumeItemListEnd
     \vspace{15pt}
-    \resumeSubheading{Spirent Communications}{2016 - 2017}{Firmware Engineer, Placement}{United Kingdom}
+    \resumeSubheading
+        {Firmware Engineer, Internship}
+        {2016 - 2017}
+        {Spirent Communications - Positioning Group}
+        {Paignton, UK}
     \resumeItemListStart
-        \resumeItem{Using Xilinx Virtex UltraScale+/Spartan FPGAs for RF signal generation (UHF).}
-        \resumeItem{Embedded C programming for Xilinx MicroBlaze and PIC16/24 micro-controllers.}
-        \resumeItem{Controlling EEPROMs, LEDs, on-board fans, and other peripherals with I2C and SMBus.}
-        \resumeItem{Configuring, building, and maintaining Embedded Linux distributions using Yocto.}
-        \resumeItem{Linux USB and PCIe kernel driver development.}
+%\resumeItem{Worked on hardware design of next generation GNSS signal generators.}
+\resumeItem{Using Xilinx Virtex UltraScale+/Spartan FPGAs for RF signal generation (GNSS/VHF/UHF).}
+\resumeItem{Embedded C programming on Xilinx MicroBlaze and PIC16/24 micro-controllers.}
+\resumeItem{Implemented software algorithm for dynamic power attenuation and calibration using programmable DAC for GNSS RF signal generators.}
+\resumeItem{Controlling EEPROMs, LEDs, on-board fans, and other peripherals with I2C and SMBus.}
     \resumeItemListEnd
 
 \vspace{10pt}
 \section{EDUCATION}
-    \resumeSubheading{University of Leeds}{2018 -- 2019}{MSc (Eng) Embedded Systems Engineering}{United Kingdom}
+    \resumeSubheading
+        {MSc (Eng) Embedded Systems Engineering, 1st}
+        {2018 -- 2019}
+        {University of Leeds}
+        {United Kingdom}
     \resumeItemListStart
-        \resumeItem{86\%, Final Project: Multi-core RISC SoC Design and Implementation for FPGAs.}
+        \resumeItem{1st, Final Project: Multi-core RISC SoC Design and Implementation for FPGAs.}
         \resumeItem{Courses include: FPGA Design for System-on-Chip, Digital Signal Processing for Communications, Embedded
-Microprocessor System Design, Circuits, Medical Electronics and E-Health}
+Microprocessor System Design, Circuit Analysis, Electronics for Medical Devices}
     \resumeItemListEnd
     
      \vspace{10pt}
-     \resumeSubheading{University of Plymouth}{2014 -- 2018}{BSc (Hons) Computer Science}{United Kingdom}
+     \resumeSubheading
+     {BSc (Hons) Computer Science, 1st}
+     {2014 -- 2018}
+     {University of Plymouth}
+     {United Kingdom}
     \resumeItemListStart
         \resumeItem{Top Final Year Student, Best Final Project, Revell Research Systems Price}
         \resumeItem{Final Project: FPGA-based 16-bit RISC soft-microprocessor (with IO \& interrupts) and CFG Compiler}
-        \resumeItem{Courses: Digital Electronics, Embedded Systems and Compilers, Machine Vision, Parallel Computation}
+        %\resumeItem{Courses: Digital Electronics, Embedded Systems and Compilers, Machine Vision, Parallel Computation}
     \resumeItemListEnd
 
 \vspace{10pt}
@@ -195,12 +228,14 @@ Microprocessor System Design, Circuits, Medical Electronics and E-Health}
 \end{multicols}\vspace{5pt}
 
 %-----------PROJECTS-----------
+\iftrue
 \section{OPEN-SOURCE PROJECTS \& CONTRIBUTIONS}
     \resumeItemListStart
-    \resumeItem{Multi-core RISC System-on-Chip. Can fit up to 96 cores on Spartan-6 and Cyclone V FPGAs.}
-    \resumeItem{16-bit RISC ISA and FPGA CPU. Written in Verilog, complete with Compiler for C-like programming language.}
+    \resumeItem{Multi-core RISC CPU design. Fits up to 96 cores on Spartan-6 and Cyclone V FPGAs.}
+    \resumeItem{16-bit RISC ISA and CPU design. Written in Verilog and C compiler for a C-like programming language.}
     \resumeItem{Custom PCB with an ST Cortex M0 and debugging header. A 2-layer board for the Minispartan6+ FPGA development kit. Features an STM32F0 TSSOP processor, dual power supplies, I2C, ICSP, and LEDs.}
 \resumeItemListEnd
+\fi
 
 %-------------------------------------------
 \end{document}
