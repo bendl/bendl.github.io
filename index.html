@@ -26,7 +26,6 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/skeleton.css">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet"> -->
   <!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet"> -->
   <!--<link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">-->
   <!--<link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Teko&display=swap" rel="stylesheet">-->
@@ -36,11 +35,12 @@
     body {
       margin-top:  50px;
       color:       black;
-      font-size:   16px;
-      font-family: serif;
+      font-size:   14px;
+      font-family: sans-serif;
+      /* font-family: 'Inter', sans-serif; */
       /* font-family: 'Roboto', sans-serif; */
       /* font-family: 'Inter', 'Roboto', sans-serif; */
-      /*font-family: 'Fira Sans', sans-serif;*/
+      /* font-family: 'Fira Sans', sans-serif; */
 
     }
 
@@ -148,44 +148,6 @@
       }
     }
 
-    @media (prefers-color-scheme: dark) {
-      html {
-      }
-
-      body {
-        background: black;
-        color:      lightgrey;
-        margin-top: 50px;
-        font-size:  16px;
-      }
-
-      a {
-        color: royalblue;
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: royalblue;
-        text-decoration: underline;
-      }
-
-      .button {
-        border-color: royalblue;
-        color:        royalblue;
-      }
-
-      .highlight {
-      }
-
-      div.item header span.sub {
-      }
-      div.item header h1 {
-        color: lightgray;
-      }
-      header h1, section h1 {
-        /* color: royalblue; */
-      }
-    }
   </style>
 </head>
 <body>
@@ -207,7 +169,7 @@
           <p><a href="https://github.com/bendl">github.com/bendl</a></p>
           <br>
           <p><a class="button" href="mailto:ben.lancaster.msc@gmail.com">Contact</a></p>
-          <p><a class="button" href="/cv/Ben_Lancaster_latest.pdf">Download CV</a></p>
+          <p><a class="button" href="./cv/Ben_Lancaster_latest.pdf">Download CV</a></p>
           <!-- <p><a class="button button-primary" href="/blog/">Blog</a></p> -->
         </header>
       </div>
@@ -218,50 +180,38 @@
           <h1>Experience</h1>
           <div class="item">
             <header>
-              <h1>Senior RTL Design Engineer</h1>
+              <h1>Senior Design Engineer</h1>
               <span class="sub">
-                <a href="https://arm.com/">Arm</a> — United Kingdom — 2023-present
+                <a href="https://arm.com/">Arm - Processor Design Group</a> — Cambridge, UK — 2019-present
               </span>
             </header>
             <p>
               <ul>
-                <li>A-class CPUs</li>
-                <li>Multi-core CPU clusters</li>
+<li>Micro-architecture specification and RTL design for A-class CPUs and multi-core clusters for client market targeting smartphones
+  and large screen compute devices.</li>
+<li>Responsible for power/clock/reset logic for upcoming A-class CPUs featuring multiple power/clock/reset domains and crossings.
+  Experience with CDC and RDC analysis.</li>
+<li>Extended CPU IP products to support ASIL B/D for automotive and safety critical applications (ISO 26262).</li>
+<li>Unit design lead for for Memory system filtering unit, MPAM, and RAS units for an upcoming System IP.</li>
+<li>Contributions to design of a fully-coherent L3 System Level Cache using AMBA CHI and AXI5.</li>
+<li>Created automation flows for generating synthesizable SystemVerilog RTL from machine-readable specifications.</li>
+<li>Experience implementing AMBA interfaces including CHI, AXI, and APB.</li>
               </ul>
             </p>
           </div>
           <div class="item">
             <header>
-              <h1>RTL Design Engineer</h1>
+              <h1>Firmware Engineer, Internship</h1>
               <span class="sub">
-                <a href="https://arm.com/">Arm</a> — United Kingdom — 2019-2023
+                <a href="https://www.spirent.com/Solutions/Position-Navigation-Timing">Spirent Communications - Positioning Group</a> — Paignton, UK — 2016-2017
               </span>
             </header>
             <p>
               <ul>
-                <li>Worked on micro-architecture specification and RTL design of a fully-coherent System Level Cache for an upcoming 5nm IP targeting high-end smart phones.</li>
-                <li>Responsible for the programming architecture, configuration register network, register block design, for distributing configuration registers throughout a design for an upcoming IP.</li>
-                <li>Created automation and rendering flows for generating synthesisable SystemVerilog RTL from machine-readable specifications.</li>
-                <li>Designed and implemented post-silicon debug features for MMU-700's Translation Buffer and Translation Control Unit compatible with Arm CoreSight ELA-600.</li>
-                <li>Experience implementing AMBA interfaces including CHI, AXI, and APB.</li>
-                <li>Physical implementation trials using Cadence and Synopsys tooling flows.</li>
-              </ul>
-            </p>
-          </div>
-          <div class="item">
-            <header>
-              <h1>Firmware Engineer Placement</h1>
-              <span class="sub">
-                <a href="https://www.spirent.com/Solutions/Position-Navigation-Timing">Spirent Communications PLC</a> — United Kingdom — 2016-2017
-              </span>
-            </header>
-            <p>
-              <ul>
-                <li>Using Xilinx Virtex UltraScale+/Spartan FPGAs for RF signal generation (UHF).</li>
-                <li>Embedded C programming for Xilinx MicroBlaze and PIC16/24 micro-controllers.</li>
+                <li>Using Xilinx Virtex UltraScale+/Spartan FPGAs for RF signal generation (GNSS/VHF/UHF).</li>
+                <li>Embedded C programming on Xilinx MicroBlaze and PIC16/24 micro-controllers.</li>
+                <li>Implemented software algorithm for dynamic power attenuation and calibration using programmable DAC for GNSS RF signal generators.</li>
                 <li>Controlling EEPROMs, LEDs, on-board fans, and other peripherals with I2C and SMBus.</li>
-                <li>Configuring, building, and maintaining Embedded Linux distributions using Yocto.</li>
-                <li>Linux USB and PCIe kernel driver development.</li>
               </ul>
             </p>
           </div>
@@ -289,14 +239,14 @@
               -->
                 <ul>
                   <li><strong>Pass with Distinction ~86%</strong></li>
-                  <li><strong>Final Project:</strong> <span class="highlight">Multi-core SoC Design and Implementation for FPGAs</span></li>
+                  <li><strong>Final Project:</strong> <span class="highlight">Multi-core CPU Design and Implementation for FPGAs</span></li>
                   <li><span class="highlight">FPGA Design for System-on-Chip</span></li>
                   <li><span class="highlight">Embedded Microprocessor System Design</span></li>
                   <li>Digital Signal Processing for Communications</li>
-                  <li>Medical Electronics and E-Health</li>
+                  <li>Circuit Analysis</li>
+                  <li>Electronics for Medical Devices</li>
                   <li>Secure Hardware Design</li>
                 </ul>
-
             </p>
             <p></p>
           </div>
@@ -317,7 +267,7 @@
                       <strong>First Class Honours</strong> with <span class="highlight">Certificate of Professional Industrial Experience</span>
                   </li>
                   <li>
-                    <strong>Final Project:</strong> <span class="highlight">FPGA-based 16-bit RISC Processor Design</span>
+                    <strong>Final Project:</strong> <span class="highlight">FPGA-based 16-bit RISC CPU Design</span>
                   </li>
                   <li>
                     <strong>Revell Research Systems Prize Winner</strong>
@@ -341,7 +291,7 @@
 
               <div class="item">
                 <header>
-                  <h1>Out-of-order RISC processor</h1>
+                  <h1>Out-of-order RV32IMC CPU</h1>
                   <span class="sub">
                     <a href="https://github.com/bendl/riscy-ooo">bendl/riscy-ooo</a>
                   </span>
@@ -349,7 +299,7 @@
                 <p>Coming soon...</p>
               </div>
 
-              <div class="item">
+              <!-- <div class="item">
                 <header>
                   <h1>Clustered SoC with multiple interconnects</h1>
                   <span class="sub">
@@ -357,11 +307,11 @@
                 </header>
                 <p>Latency improvements for the Vmicro16 SoC by clustering cores into multiple groups and using multiple-level interconnects.</p>
                 <img src="images/vmicro16_cluster_soc_small.png" width="80%">
-              </div>
+              </div> -->
 
               <div class="item">
                 <header>
-                  <h1>Multi-core RISC SoC for FPGAs</h1>
+                  <h1>Multi-core RISC CPU Design</h1>
                   <span class="sub">
                       <a href="https://github.com/bendl/vmicro16/blob/master/docs/reports/build/ELEC5881M_Ben_Lancaster_201280376_viva.pdf">bendl/vmicro16</a>
                     </span>
@@ -373,7 +323,7 @@
 
               <div class="item">
                 <header>
-                  <h1>FPGA 16-bit Embedded Processor</h1>
+                  <h1>FPGA 16-bit Embedded CPU Design</h1>
                   <span class="sub">
                       <a href="https://raw.githubusercontent.com/bendl/verilog_cpu_and_compiler/master/doc/final/build/Ben_Lancaster_10424877.pdf">bendl/prco304/prco_core</a>
                     </span>
@@ -386,7 +336,7 @@
 
               <div class="item">
                 <header>
-                  <h1>Arm Cortex M0 Processor Board</h1>
+                  <h1>PCB development board for Arm Cortex-M0</h1>
                   <span class="sub">
                       <a href="https://github.com/bendl/armm0">bendl/armm0</a>
                     </span>
@@ -402,8 +352,19 @@
                       <a href="https://github.com/bendl/osc1">bendl/osc1</a>
                     </span>
                 </header>
-                <p>PCB board for the <a href="https://www.ftdichip.com/Support/Documents/DataSheets/Modules/DS_FT2232H_Mini_Module.pdf">FT2232H Mini Module</a> and <a href="https://tinyfpga.com/">TinyFPGA AX2</a> for testing <span class="highlight">JTAG</span> and <span class="highlight">I2C</span> implementations.</p>
+                <p>PCB board for the <a href="https://www.ftdichip.com/Support/Documents/DataSheets/Modules/DS_FT2232H_Mini_Module.pdf">FT2232H Mini Module</a> and <a href="https://tinyfpga.com/">TinyFPGA AX2</a> for experimenting with <span class="highlight">JTAG</span> and <span class="highlight">I2C</span> implementations.</p>
                 <img src="images/ft2232h_tinyfpga.JPG" width="70%">
+              </div>
+
+              <div class="item">
+                <header>
+                  <h1>CUDA implementation of Discrete Fourier Transform for GPUs</h1>
+                  <span class="sub">
+                      <a href="https://raw.githubusercontent.com/bendl/Parallel-DFT-CUDA-MPI/master/report/SOFT354%20-%20Ben%20Lancaster%2010424877.pdf">bendl/soft354</a>
+                    </span>
+                </header>
+                <p>Designed, implemented, and evaluated a parallel implementation of the Discrete Fourier Transform.</p>
+                <p>Read the <a href="https://github.com/bendl/soft354" class="highlight">methodology and results here</a>.</p>
               </div>
 
               <div class="item">
@@ -415,17 +376,6 @@
                 </header>
                 <p><span class="highlight">Compiler</span> and <span class="highlight">assembler</span> for the <span class="highlight">PRCO</span> embedded processor.
                   Features simple <span class="highlight">optimisations</span> including constant folding and unreachable code elimination.</p>
-              </div>
-
-              <div class="item">
-                <header>
-                  <h1>Parallel implementation of Discrete Fourier Transform for GPUs in CUDA</h1>
-                  <span class="sub">
-                      <a href="https://raw.githubusercontent.com/bendl/Parallel-DFT-CUDA-MPI/master/report/SOFT354%20-%20Ben%20Lancaster%2010424877.pdf">bendl/soft354</a>
-                    </span>
-                </header>
-                <p>Designed, implemented, and evaluated a parallel implementation of the Discrete Fourier Transform.</p>
-                <p>Read the <a href="https://github.com/bendl/soft354" class="highlight">methodology and results here</a>.</p>
               </div>
 
               <!--
