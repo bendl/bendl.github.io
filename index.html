@@ -36,7 +36,7 @@
       margin-top:  50px;
       color:       black;
       font-size:   14px;
-      font-family: sans-serif;
+      font-family: serif;
       /* font-family: 'Inter', sans-serif; */
       /* font-family: 'Roboto', sans-serif; */
       /* font-family: 'Inter', 'Roboto', sans-serif; */
@@ -155,6 +155,11 @@
       vertical-align: baseline;
     }
 
+    .greyscale {
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(20%);
+    }
+
   </style>
 </head>
 <body>
@@ -165,14 +170,14 @@
     <div class="row">
       <div class="four columns me-info">
         <header>
-          <img src="images/me6crop.jpg" width="275px">
+          <img src="images/ben_yosemite.jpeg" width="275px" class="greyscale">
           <h1>Ben Lancaster</h1>
           <p>CPU Design Engineer @ Arm</p>
           <!--<p>England, United Kingdom</p>-->
           <!-- <hr> -->
           <br>
           <p><a href="mailto:ben.lancaster.msc@gmail.com">ben.lancaster.msc@gmail.com</a></p>
-          <p><a href="https://www.linkedin.com/in/ben-lancaster-73675deb/">LinkedIn <img class="inline-img" style="background: #0077B5" width="20px" src="images/LinkedIn_icon.svg"/></a></p>
+          <p><a href="https://www.linkedin.com/in/ben-lancaster-62414baa/">LinkedIn <img class="inline-img" style="background: #0077B5" width="20px" src="images/LinkedIn_icon.svg"/></a></p>
           <p><a href="https://github.com/bendl">github.com/bendl <img class="inline-img" width="20px" src="images/github-mark.svg"/></a></p>
           <br>
           <p><a class="button" href="mailto:ben.lancaster.msc@gmail.com">Contact</a></p>
@@ -187,7 +192,7 @@
           <h1>Experience</h1>
           <div class="item">
             <header>
-              <h1>Senior Design Engineer</h1>
+              <h1>Senior CPU Design Engineer</h1>
               <span class="sub">
                 <a href="https://arm.com/">Arm - Processor Design Group</a> — Cambridge, UK — 2019-present
               </span>
@@ -203,22 +208,23 @@
 <li>Contributions to design of a fully-coherent L3 System Level Cache using AMBA CHI and AXI5.</li>
 <li>Created automation flows for generating synthesizable SystemVerilog RTL from machine-readable specifications.</li>
 <li>Experience implementing AMBA interfaces including CHI, AXI, and APB.</li>
+
+
               </ul>
             </p>
           </div>
           <div class="item">
             <header>
-              <h1>Firmware Engineer, Internship</h1>
+              <h1>Firmware Engineer, Intern</h1>
               <span class="sub">
                 <a href="https://www.spirent.com/Solutions/Position-Navigation-Timing">Spirent Communications - Positioning Group</a> — Paignton, UK — 2016-2017
               </span>
             </header>
             <p>
               <ul>
-                <li>Using Xilinx Virtex UltraScale+/Spartan FPGAs for RF signal generation (GNSS/VHF/UHF).</li>
-                <li>Embedded C programming on Xilinx MicroBlaze and PIC16/24 micro-controllers.</li>
-                <li>Implemented software algorithm for dynamic power attenuation and calibration using programmable DAC for GNSS RF signal generators.</li>
-                <li>Controlling EEPROMs, LEDs, on-board fans, and other peripherals with I2C and SMBus.</li>
+                <li>Mixed-signal design for software-defined multi-frequency GNSS signal generators using Xilinx UltraScale FPGAs.</li>
+                <li>Implemented algorithm for dynamic power attenuation/calibration using programmable DACs for consistent signal power.</li>
+                <li>Experience using various test equipment (oscilloscopes, spectrum analysers, function generators, power meters).</li>
               </ul>
             </p>
           </div>
